@@ -1,0 +1,84 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[colorlinks,linkcolor=blue,filecolor=blue,citecolor=red,bookmarksnumbered=true]{hyperref}
+
+\title{Understanding the Global Routing System}
+
+\author{Alexander~Afanasyev %
+%,˜\IEEEmembership{Member,˜IEEE,} 
+and Neil~Tilley \\ %
+\small \{alexander.afanasyev, tilleyns\}@ucla.edu \\ \\
+\small Computer Science Department \\
+\small University of California, Los Angeles \\
+} 
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The existing Internet fully relies on the BGP protocol \cite{Rekhter:1995:RFC1771-BGP} to maintain global connectivity. The key element of the BGP is that each participant (autonomous system, AS) announces its IP prefixes which are propagated to the rest of the ASes by the means of the protocol. However the announced set is generally limited by the address blocks allocated to particular AS by a Regional Internet Registry (RIR), the AS itself decides the granularity of the announcements. In other words, AS having only one allocated address block can announce multiple prefixes. The two major reasons for this are traffic engineering and multihoming. The popularity of the prefix splitting can be demonstrated by allocation vs announcement statistics. The number of announced prefixes (160K in 2004 \cite{Meng:2005:IPv4-address} and 300K in 2009 \cite{::BGP-Reports}) is more than twice bigger than the number of allocated IPv4 blocks (65K in 2004  and 140K in 2009 ). This dynamics cast doubt on global routing scalability.
+
+As originally envisioned, a hierarchical and scalable routing table was to serve as an efficient and streamlined mechanism, but not foreseen was how the limited number ($2^{32}$) of IPv4 addresses and the increasing number of allocations to users would lead to fractionalization and finer segmentation of the IP address table. There exist several solutions which attempt to contain the size of the global routing table.  Accompanying the growth of the IP assignments have been aggregation techniques with the intent to gather a group of prefixes under a more general IP prefix. However, Internet customers with particular traffic engineering and multihoming demands have preferred that these guidelines not be implemented. On the other hand, some customers willing to aggregate are not in a position to do so, due to the inability of RIRs to assign a specific requester a contiguous range of IP addresses. Such is the case, for example, with UCLA which has accumulated eight IPv4 address blocks and forced to announce eight different prefixes (128.97.0.0/16, 131.179.0.0/16, 149.142.0.0/16, 164.67.0.0/16, 169.232.0.0/16, 192.35.210.0/24, 192.35.225.0/24, 192.154.2.0/24). This granular allocation has been one of the major reasons of the global routing table growth. An interesting topic to pursue would be to find the average number of allocated blocks assigned to various ASes.
+
+In \cite{Meng:2005:IPv4-address}, Meng et al. reported a number of statistics that will serve as a baseline.  These include the number of allocated blocks and additionally the announced prefixes.  We would like to conduct more detailed research with country and AS granularity on the ratio and correlation between the number of allocated blocks and the announced prefixes in the BGP routing table. Arguably, any attempt to renumber allocations such that they are less fragmented would reduce both the number of allocations and correspondingly the number of prefixes and size of the BGP table. Our analysis will help to establish an upper bound of the potential BGP routing table reduction if we can apply some IPv4 renumbering technique. Additionally, this will justify the necessity of the effective IPv6 address assignment and reassignment techniques.
+
+% BGP:
+% 128.97.0.0/16, 131.179.0.0/16, 149.142.0.0/16, 164.67.0.0/16, 169.232.0.0/16, 192.35.210.0/24, 192.35.225.0/24, 192.154.2.0/24
+% 
+% ARIN:
+% 131.179.0.0/16||direct assignment
+% 128.97.0.0/16|AS52|direct assignment 
+% 192.154.2.0/24|AS52|direct assignment
+% 192.35.210.0/24|AS52|direct assignment 
+% 192.35.225.0/24|AS52|direct assignment
+% 149.142.0.0/16|AS52|direct assignment
+% 164.67.0.0/16|AS52|direct assignment 
+% 169.232.0.0/16|AS52|reassigned 
+% 
+% 2607:F010:0000:0000:0000:0000:0000:0000/32|AS52|direct allocation 
+
+% 
+% ( raises valid questions about how best to allocate IP addresses in future address systems, for example the incoming IPv6.) 
+% 
+
+% ..., policy for core router for everything that is more precise than 19 or 20 digit thinghies.
+
+% There are different solutionThere are number of deployed solutions to limit routing table size.
+
+In this project we want to update and extend previous research of global routing table dynamics (\cite{Xu:2003:IPv4-Address}, \cite{Meng:2003:An-analysis-of-BGP-routing}, \cite{Meng:2005:IPv4-address}). A number of the recent research \cite{::BGP-Reports} \cite{::IPv4-Address-Report} reveals up-to-date dynamics of the BGP routing table and dynamics and expectation of IPv4 allocation. However, the more deep analysis at the level of countries and/or particular ASes can reveal the IP space allocation and utilization patterns and predict future demands for IP space.
+
+
+  % shows  Another interesting aspect of the work is to investigate dynamics and contribution of the particular countries to the global routing table. The comparison of country based statistics to the global one, can reveal the current states and and future demands.
+
+
+\section{Objectives}
+
+Our objective is to perform refinement of the IPv4 allocation and BGP routing table evolution study \cite{Meng:2005:IPv4-address}. In our research we are going to obtain statistical information of IPv4 allocations from various RIRs (ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC) and BGP routing tables from RouteViews project \cite{::Route-Views}. Using this statistical information we are going to analyze:
+
+\begin{itemize}
+	\item prefix allocation dynamics (individually by RIRs and total);
+	\item prefix announcing dynamics (from RouteViews project);
+	\item dynamics of the ratio between allocated and announced prefixes (combination of the first two analyses);
+	\item prefix allocation geography (analysis of the allocation dynamics per country);
+	\item prefix announcing geography (analysis of the countries contribution to the BGP routing table);
+	\item analysis of the announced prefix age (analysis of the times prefixes are announced in the BGP table, histogram or CDF);
+	\item analysis of the number allocated blocks for each AS (averaged allocations number, histogram, CDF);
+\end{itemize}
+
+\section{Timeline}
+
+The project can be divided into 4 major parts: creating utilities to gather source information, extracting statistical information about IP block allocations, extracting statistical information about announced IP prefixes and preparation of the final report and presentation. The expected timeline is as follows:
+
+\begin{itemize}
+\item \textbf{Week 3--4}: Finalizing the set of the sources and writing the code to obtain and parse the information\
+\item \textbf{Week 5}: Extracting allocation statistics from RIRs (ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC)
+\item \textbf{Week 6--7}: Extracting statistics about announced prefixes from RouteViews
+\item \textbf{Week 8--9}: Report and presentation preparation
+\item \textbf{Week 10}: Project presentation
+\end{itemize}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{cs217}
+\end{document}

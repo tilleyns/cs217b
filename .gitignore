@@ -1,0 +1,7 @@
+*.gz 
+*.pdf 
+*.out 
+*.log 
+*.bbl 
+*.blg
+.DS*
