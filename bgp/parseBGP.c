@@ -212,11 +212,11 @@ if(entry->type == BGPDUMP_TYPE_ZEBRA_BGP && entry->subtype == BGPDUMP_SUBTYPE_ZE
 //	    printf("    UPTIME      : %s",asctime(gmtime(&entry->body.mrtd_table_dump.uptime)));
 //	    printf("    PEER IP     : %s\n",peer_ip);
 //	    printf("    PEER AS     : %s\n",print_asn(entry->body.mrtd_table_dump.peer_as));
-	    if( strcmp(prefix,old_prefix)==0 && old_length==e->prefix_length ) break;
+	    if( strcmp(prefix,old_prefix)==0 && old_length==entry->body.mrtd_table_dump.mask ) break;
 	    printf("%s/%d\n",prefix,entry->body.mrtd_table_dump.mask);
 
 		strcpy( old_prefix, prefix );
-		old_length=e->prefix_length;
+		old_length=entry->body.mrtd_table_dump.mask;
 
 //    	show_attr(entry->attr);
 	    break;
