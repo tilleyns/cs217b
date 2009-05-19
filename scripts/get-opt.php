@@ -54,7 +54,7 @@ function get_file( $date )
 	
 	if( $bzipped=="" || $bzipped=="none" )
 	{
-		system( "wget $url/$file 2>/dev/null" );
+//		system( "wget $url/$file 2>/dev/null" );
 	}
 	else if( $bzipped=="gunzip" )
 	{
@@ -109,7 +109,7 @@ function parse_delegated( $on_date, $file, $new_format=true )
 			$RIR_date="'".$data[5]."'";
 		}
 
-		if( $RIR_date=="'0000-00-00'" ) $RIR_date="NULL";
+		if( $RIR_date=="'0000-00-00'" || $RIR_date=="'0'" ) $RIR_date="NULL";
 		
 		$type   =$data[6];
 		
@@ -120,7 +120,7 @@ function parse_delegated( $on_date, $file, $new_format=true )
 			$prefix=32-floor( log($block_size,2) );
 	
 			$sql="INSERT INTO ipv4 (on_date,rir,country,ip,is_adhoc,rir_date,type) VALUES(".
-			"'$on_date','$rir','$country','$ip_base/$prefix'::inet+$offset,'$repeat',$RIR_date,'$type')";
+			"'$on_date','$rir','$country',('$ip_base/$prefix'::inet+$offset)::cidr::ip4r,'$repeat',$RIR_date,'$type')";
 	
 	//		print $sql."\n";
 			try {
@@ -129,7 +129,7 @@ function parse_delegated( $on_date, $file, $new_format=true )
 			catch( Exception $e )
 			{
 				print ".";
-//				print $e->getMessage();
+				print $e->getMessage();
 			}
 			
 			$block_size-=pow( 2, 32-$prefix );
