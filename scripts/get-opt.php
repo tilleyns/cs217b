@@ -36,7 +36,7 @@ while( $date<$last )
 	
 	unlink( "$file" );
 	
-	$date->modify( "1 week" );
+	$date->modify( "4 week" );
 }
 
 function get_file( $date )
@@ -54,7 +54,7 @@ function get_file( $date )
 	
 	if( $bzipped=="" || $bzipped=="none" )
 	{
-//		system( "wget $url/$file 2>/dev/null" );
+		system( "wget $url/$file 2>/dev/null" );
 	}
 	else if( $bzipped=="gunzip" )
 	{
@@ -83,9 +83,11 @@ function parse_delegated( $on_date, $file, $new_format=true )
 	global $DB;
 	$file=fopen( $file, 'r' );
 	if( !$file ) exit;
+	$DB->BeginTrans();
 	while( !feof($file) )
 	{
 		$data=fgetcsv( $file, 5000, "|" );
+		if( sizeof($data)==1 ) continue;
 		
 		//ripencc|NL|ipv4|24.132.0.0|32768|19971013|allocated ^M
 		if( $data[2]!="ipv4" || $data[1]=='*' ) continue;
@@ -119,8 +121,8 @@ function parse_delegated( $on_date, $file, $new_format=true )
 		{
 			$prefix=32-floor( log($block_size,2) );
 	
-			$sql="INSERT INTO ipv4 (on_date,rir,country,ip,is_adhoc,rir_date,type) VALUES(".
-			"'$on_date','$rir','$country',('$ip_base/$prefix'::inet+$offset)::cidr::ip4r,'$repeat',$RIR_date,'$type')";
+			$sql="INSERT INTO ipv4 (on_date,rir,country,ip,is_adhoc,rir_date,type,size) VALUES(".
+			"'$on_date','$rir','$country',('$ip_base/$prefix'::inet+$offset)::cidr::ip4r,'$repeat',$RIR_date,'$type',ip4r_size(('$ip_base/$prefix'::inet+$offset)::cidr::ip4r))";
 	
 	//		print $sql."\n";
 			try {
@@ -139,6 +141,7 @@ function parse_delegated( $on_date, $file, $new_format=true )
 		}
 		
 	}
+	$DB->CommitTrans();
 }
 
 ?>
