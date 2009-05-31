@@ -26,16 +26,13 @@ function hsb( $color )
 #foreach( $DATES as $date )
 $date=$argv[1];
 
-$field=$argv[3];
 //="count";
 
-print "function $argv[2]() {\n";
-{
-	$max=$DB->GetOne( "SELECT max($field) FROM
-			(select sum($field) as $field from ipv4_counts_country where on_date='2009-04-23' group by country) d" );
+	$row=$DB->GetRow( "SELECT max(size),max(count) FROM
+			(select sum(size) as size, sum(count) as count from ipv4_counts_country where on_date='2009-04-23' group by country) d" );
 
-	$max=log($max,2);
-#	print $max;
+$max_size=log( $row[0],2 );
+$max_count=log( $row[1],2 );
 
 	$sql1=
 "
@@ -52,29 +49,35 @@ order by size desc
 $sql=$sql1." and country='EU' ".$sql2;
 $res=$DB->Execute( $sql );
 $row=$res->FetchRow();
-$eu=$row[$field];
 
-$sql=$sql1." and country='AP' ".$sql2;
-$res=$DB->Execute( $sql );
-$row=$res->FetchRow();
-$ap=$row[$field];
+   $eu=array(
+         "count"=>$row['count'],
+         "size" =>$row['size'],
+   );
 
+$ret_c="";
+$ret_s="";
 $sql=$sql1." and country!='EU' and country!='AP' ".$sql2;
 $res=$DB->Execute( $sql );
 	foreach( $res as $row )
 	{
-			$count=$row[$field];
-//			print $row[$field]."\n";
-		if( is_EU($row['country']) ) $count+=$eu;
-//		if( is_AP($row['country']) ) $count+=$eu;
+			$count=$row['count'];
+			$size=$row['size'];
+			if( is_EU($row['country']) ) 
+			{
+					$count+=$eu['count'];
+					$size+=$eu['size'];
+			}
 		
-		#print "$date\t$row[country]\t$row[name]\t$row[count]\t$row[size]\t$row[ratio]\n";
-//		print (240-240*log($count,2)/$max)." = ".$count."\n";
-		print "encodedPolygon_$row[country].setFillStyle({color:'#".hsb(240-240*log($count,2)/$max)."',opacity:0.7});\n";
+			$ret_c.="encodedPolygon_$row[country].setFillStyle({color:'#".hsb(240-240*log($count,2)/$max_count)."',opacity:0.7});\n";
+			$ret_s.="encodedPolygon_$row[country].setFillStyle({color:'#".hsb(240-240*log($size,2)/$max_size)."',opacity:0.7});\n";
 	}
 
-#	die;
-}
+print "function size".str_replace("-","_",$date)."() {\n";
+print $ret_s;
+print "}\n";
 
+print "function count".str_replace("-","_",$date)."() {\n";
+print $ret_c;
 print "}\n";
 
