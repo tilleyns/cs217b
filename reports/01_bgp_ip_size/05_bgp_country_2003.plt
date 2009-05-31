@@ -8,6 +8,7 @@ set logscale y
 set xlabel 'Countries'
 set ylabel 'Number of prefixes'
 
+set yrange [1:1e6]
 
 unset xtics
 plot \
