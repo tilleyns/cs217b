@@ -2,8 +2,8 @@
 
 define( "BASEDIR", dirname(__FILE__) );
 
-include_once( BASEDIR."/../scripts/adodb/adodb-exceptions.inc.php" );
-include_once( BASEDIR."/../scripts/adodb/adodb.inc.php" );
+include_once( "adodb/adodb-exceptions.inc.php" );
+include_once( "adodb/adodb.inc.php" );
 $DB=&NewADOConnection( "postgres://postgres:@localhost/ip_stat?persist" );
 if( !$DB ) 
 {

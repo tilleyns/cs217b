@@ -16,7 +16,7 @@ foreach( $DATES as $date )
 	(CASE WHEN i.size IS NULL THEN 0 ELSE sum(i.size) END) as size,
 	(CASE WHEN i.size IS NULL THEN 0 ELSE sum(i.size)/count(*) END) as ratio
 	from (select prefixes as prefix, 2^(32-prefixes) as size from prefixes() ) p
-	left join ipv4 i on p.size=i.size and on_date='$date'
+	left join ipv4 i on p.size=i.size and on_date='$date' and is_adhoc='f'
 	group by prefix,i.size
 	order by prefix";
 #"
