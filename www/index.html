@@ -4,56 +4,59 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>CS217b project</title>
-    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA_O2q_21TrwaqT0ryJaPmVhRFhBUpW6p0A43AJXjPFoHY0d0GIRQv_ibsFETPF12Hf4q4CNBgD4N3bw&sensor=false"
-			type="text/javascript"></script>
-	<script src="bordersOverlay.js"></script>
-	<script src="ip_count_2003.js"></script>
-	<script src="ip_count_2004.js"></script>
-	<script src="ip_count_2005.js"></script>
-	<script src="ip_count_2006.js"></script>
-	<script src="ip_count_2007.js"></script>
-	<script src="ip_count_2008.js"></script>
-	<script src="ip_count_2009.js"></script>
-   	<script src="ip_size_2003.js"></script>
-	<script src="ip_size_2004.js"></script>
-	<script src="ip_size_2005.js"></script>
-	<script src="ip_size_2006.js"></script>
-	<script src="ip_size_2007.js"></script>
-	<script src="ip_size_2008.js"></script>
-	<script src="ip_size_2009.js"></script>
- <script type="text/javascript">
-
-	var map;
-    function initialize() {
-      if (GBrowserIsCompatible()) {
-        map = new GMap2(document.getElementById("map_canvas"));
-        map.setCenter(new GLatLng(40.4419, 0.1419), 2);
-		map.setUIToDefault();
-		map.setMapType(G_NORMAL_MAP);
-
-		initBorders();
-		addBordersOverlay();
-      }
-    }
-
     </script>
   </head>
-  <body onload="initialize()" onunload="GUnload()" style="margin:0">
-	<a href="#" onClick="ip2003()">IP 2003</a>
-   	<a href="#" onClick="ip2004()">IP 2004</a>
-   	<a href="#" onClick="ip2005()">IP 2005</a>
-   	<a href="#" onClick="ip2006()">IP 2006</a>
-   	<a href="#" onClick="ip2007()">IP 2007</a>
-   	<a href="#" onClick="ip2008()">IP 2008</a>
-   	<a href="#" onClick="ip2009()">IP 2009</a>
-	<a href="#" onClick="ipSpace2003()">IP-space 2003</a>
-	<a href="#" onClick="ipSpace2004()">IP-space 2004</a>
-	<a href="#" onClick="ipSpace2005()">IP-space 2005</a>
-	<a href="#" onClick="ipSpace2006()">IP-space 2006</a>
-	<a href="#" onClick="ipSpace2007()">IP-space 2007</a>
-	<a href="#" onClick="ipSpace2008()">IP-space 2008</a>
-   	<a href="#" onClick="ipSpace2009()">IP-space 2009</a>
- <div id="map_canvas" style="/*width: 2200px; height: 1300px*/width:100%;height:100%"></div>
+  <body >
+		<h1>Top secret page</h1>
+
+		<h2>Announced IP space stats</h2>
+		<a href="bgp.php?date=2003-01-01&type=size">2003</a><br/>
+		<a href="bgp.php?date=2004-01-01&type=size">2004</a><br/>
+		<a href="bgp.php?date=2005-01-01&type=size">2005</a><br/>
+		<a href="bgp.php?date=2006-01-01&type=size">2006</a><br/>
+		<a href="bgp.php?date=2007-01-01&type=size">2007</a><br/>
+		<a href="bgp.php?date=2008-01-01&type=size">2008</a><br/>
+		<a href="bgp.php?date=2009-01-01&type=size">2009</a><br/>
+		<a href="bgp.php?date=2009-04-23&type=size">May 2009</a><br/>
+
+		<h2>Allocated IP space stats</h2>
+		<a href="ip.php?date=2003-01-01&type=size">2003</a><br/>
+		<a href="ip.php?date=2004-01-01&type=size">2004</a><br/>
+		<a href="ip.php?date=2005-01-01&type=size">2005</a><br/>
+		<a href="ip.php?date=2006-01-01&type=size">2006</a><br/>
+		<a href="ip.php?date=2007-01-01&type=size">2007</a><br/>
+		<a href="ip.php?date=2008-01-01&type=size">2008</a><br/>
+		<a href="ip.php?date=2009-01-01&type=size">2009</a><br/>
+		<a href="ip.php?date=2009-04-23&type=size">May 2009</a><br/>
+
+		<h2>Number of announced prefixes</h2>
+		<a href="bgp.php?date=2003-01-01&type=count">2003</a><br/>
+		<a href="bgp.php?date=2004-01-01&type=count">2004</a><br/>
+		<a href="bgp.php?date=2005-01-01&type=count">2005</a><br/>
+		<a href="bgp.php?date=2006-01-01&type=count">2006</a><br/>
+		<a href="bgp.php?date=2007-01-01&type=count">2007</a><br/>
+		<a href="bgp.php?date=2008-01-01&type=count">2008</a><br/>
+		<a href="bgp.php?date=2009-01-01&type=count">2009</a><br/>
+		<a href="bgp.php?date=2009-04-23&type=count">May 2009</a><br/>
+
+		<h2>Number of allocated prefixes</h2>
+		<a href="ip.php?date=2003-01-01&type=count">2003</a><br/>
+		<a href="ip.php?date=2004-01-01&type=count">2004</a><br/>
+		<a href="ip.php?date=2005-01-01&type=count">2005</a><br/>
+		<a href="ip.php?date=2006-01-01&type=count">2006</a><br/>
+		<a href="ip.php?date=2007-01-01&type=count">2007</a><br/>
+		<a href="ip.php?date=2008-01-01&type=count">2008</a><br/>
+		<a href="ip.php?date=2009-01-01&type=count">2009</a><br/>
+		<a href="ip.php?date=2009-04-23&type=count">May 2009</a><br/>
+
+		<h2>Changes in number of allocated prefixes</h2>
+		<a href="plus.php?date=2003-01-01&type=sum">2003-2004</a><br/>
+		<a href="plus.php?date=2004-01-01&type=sum">2004-2005</a><br/>
+		<a href="plus.php?date=2005-01-01&type=sum">2005-2006</a><br/>
+		<a href="plus.php?date=2006-01-01&type=sum">2006-2007</a><br/>
+		<a href="plus.php?date=2007-01-01&type=sum">2007-2008</a><br/>
+		<a href="plus.php?date=2008-01-01&type=sum">2008-2009</a><br/>
+
   </body>
 </html>
 
