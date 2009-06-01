@@ -1,0 +1,221 @@
+1	10	"North America"	"ANGUILLA                                       "	0	2
+2	10	"North America"	"ANTIGUA AND BARBUDA                            "	0	6
+3	10	"North America"	"ARUBA                                          "	0	2
+4	10	"North America"	"BAHAMAS                                        "	0	7
+5	10	"North America"	"BARBADOS                                       "	0	13
+6	10	"North America"	"BELIZE                                         "	0	8
+7	10	"North America"	"BERMUDA                                        "	0	24
+8	10	"North America"	"CANADA                                         "	0	5683
+9	10	"North America"	"CAYMAN ISLANDS                                 "	0	8
+10	10	"North America"	"COSTA RICA                                     "	0	28
+11	10	"North America"	"CUBA                                           "	0	16
+12	10	"North America"	"DOMINICAN REPUBLIC                             "	0	44
+13	10	"North America"	"EL SALVADOR                                    "	0	23
+14	10	"North America"	"GREENLAND                                      "	0	2
+15	10	"North America"	"GRENADA                                        "	0	1
+16	10	"North America"	"GUADELOUPE                                     "	0	5
+17	10	"North America"	"GUATEMALA                                      "	0	37
+18	10	"North America"	"HAITI                                          "	0	8
+19	10	"North America"	"HONDURAS                                       "	0	19
+20	10	"North America"	"JAMAICA                                        "	0	25
+21	10	"North America"	"MEXICO                                         "	0	158
+22	10	"North America"	"MONTSERRAT                                     "	0	2
+23	10	"North America"	"NETHERLANDS ANTILLES                           "	0	31
+24	10	"North America"	"NICARAGUA                                      "	0	20
+25	10	"North America"	"PANAMA                                         "	0	56
+26	10	"North America"	"PUERTO RICO                                    "	0	64
+27	10	"North America"	"SAINT KITTS AND NEVIS                          "	0	5
+28	10	"North America"	"SAINT LUCIA                                    "	0	1
+29	10	"North America"	"SAINT VINCENT AND THE GRENADINES               "	0	3
+30	10	"North America"	"SURINAME				"	0	7
+31	10	"North America"	"TURKS AND CAICOS ISLANDS                       "	0	1
+32	10	"North America"	"UNITED STATES                                  "	0	36476
+33	10	"North America"	"VIRGIN ISLANDS (BRITISH)                       "	0	1
+34	10	"North America"	"VIRGIN ISLANDS (U.S.)                          "	0	7
+35	15	"South America"	"ARGENTINA                                      "	0	406
+36	15	"South America"	"BOLIVIA                                        "	0	38
+37	15	"South America"	"BRAZIL                                         "	0	267
+38	15	"South America"	"CHILE                                          "	0	391
+39	15	"South America"	"COLOMBIA                                       "	0	225
+40	15	"South America"	"ECUADOR                                        "	0	172
+41	15	"South America"	"FRENCH GUIANA                                  "	0	1
+42	15	"South America"	"GUYANA                                         "	0	1
+43	15	"South America"	"PARAGUAY                                       "	0	18
+44	15	"South America"	"PERU                                           "	0	77
+45	15	"South America"	"TRINIDAD AND TOBAGO                            "	0	27
+46	15	"South America"	"URUGUAY                                        "	0	47
+47	15	"South America"	"VENEZUELA, BOLIVARIAN REPUBLIC OF              "	0	112
+48	20	"Europe"	"ALAND ISLANDS				"	0	1
+49	20	"Europe"	"ALBANIA                                        "	0	16
+50	20	"Europe"	"ANDORRA                                        "	0	3
+51	20	"Europe"	"AUSTRIA                                        "	0	842
+52	20	"Europe"	"BELARUS                                        "	0	27
+53	20	"Europe"	"BELGIUM                                        "	0	402
+54	20	"Europe"	"BOSNIA AND HERZEGOVINA                         "	0	43
+55	20	"Europe"	"BULGARIA                                       "	0	351
+56	20	"Europe"	"CROATIA 				       "	0	70
+57	20	"Europe"	"CZECH REPUBLIC                                 "	0	650
+58	20	"Europe"	"DENMARK                                        "	0	476
+59	20	"Europe"	"ESTONIA                                        "	0	81
+60	20	"Europe"	"EUROPEAN UNION"	0	4942
+61	20	"Europe"	"FAROE ISLANDS                                  "	0	7
+62	20	"Europe"	"FINLAND                                        "	0	652
+63	20	"Europe"	"FRANCE                                         "	0	1773
+64	20	"Europe"	"GERMANY                                        "	0	5543
+65	20	"Europe"	"GIBRALTAR                                      "	0	10
+66	20	"Europe"	"GREECE                                         "	0	232
+67	20	"Europe"	"GUERNSEY				"	0	2
+68	20	"Europe"	"HUNGARY                                        "	0	242
+69	20	"Europe"	"ICELAND                                        "	0	42
+70	20	"Europe"	"IRELAND                                        "	0	219
+71	20	"Europe"	"ISLE OF MAN				"	0	5
+72	20	"Europe"	"ITALY                                          "	0	955
+73	20	"Europe"	"JERSEY					"	0	3
+74	20	"Europe"	"LATVIA                                         "	0	196
+75	20	"Europe"	"LIECHTENSTEIN                                  "	0	16
+76	20	"Europe"	"LITHUANIA                                      "	0	119
+77	20	"Europe"	"LUXEMBOURG                                     "	0	71
+78	20	"Europe"	"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF     "	0	30
+79	20	"Europe"	"MALTA                                          "	0	49
+80	20	"Europe"	"MOLDOVA, REPUBLIC OF                           "	0	36
+81	20	"Europe"	"MONACO                                         "	0	14
+82	20	"Europe"	"MONTENEGRO				"	0	5
+83	20	"Europe"	"NETHERLANDS                                    "	0	1412
+84	20	"Europe"	"NORWAY                                         "	0	408
+85	20	"Europe"	"POLAND                                         "	0	1544
+86	20	"Europe"	"PORTUGAL                                       "	0	141
+87	20	"Europe"	"ROMANIA                                        "	0	737
+88	20	"Europe"	"RUSSIAN FEDERATION                             "	0	2975
+89	20	"Europe"	"SAN MARINO                                     "	0	4
+90	20	"Europe"	"SERBIA					"	0	21
+91	20	"Europe"	"SERBIA"	0	88
+92	20	"Europe"	"SLOVAKIA 			               "	0	163
+93	20	"Europe"	"SLOVENIA                                       "	0	205
+94	20	"Europe"	"SPAIN                                          "	0	517
+95	20	"Europe"	"SWEDEN                                         "	0	836
+96	20	"Europe"	"SWITZERLAND                                    "	0	1333
+97	20	"Europe"	"UKRAINE                                        "	0	1681
+98	20	"Europe"	"UNITED KINGDOM                                 "	0	3646
+99	20	"Europe"	"VATICAN CITY STATE (HOLY SEE)                  "	0	1
+100	30	"Asia/Pacific"	"AFGHANISTAN                                    "	0	14
+101	30	"Asia/Pacific"	"ARMENIA                                        "	0	39
+102	30	"Asia/Pacific"	"AUSTRALIA                                      "	0	6039
+103	30	"Asia/Pacific"	"AZERBAIJAN                                     "	0	25
+104	30	"Asia/Pacific"	"Asia/Pacific Region"	0	106
+105	30	"Asia/Pacific"	"BAHRAIN                                        "	0	33
+106	30	"Asia/Pacific"	"BANGLADESH                                     "	0	121
+107	30	"Asia/Pacific"	"BHUTAN                                         "	0	5
+108	30	"Asia/Pacific"	"BRUNEI DARUSSALAM                              "	0	14
+109	30	"Asia/Pacific"	"CAMBODIA                                       "	0	40
+110	30	"Asia/Pacific"	"CHINA                                          "	0	1529
+111	30	"Asia/Pacific"	"CYPRUS                                         "	0	75
+112	30	"Asia/Pacific"	"GEORGIA                                        "	0	44
+113	30	"Asia/Pacific"	"HONG KONG                                      "	0	638
+114	30	"Asia/Pacific"	"INDIA                                          "	0	577
+115	30	"Asia/Pacific"	"INDONESIA                                      "	0	450
+116	30	"Asia/Pacific"	"IRAN (ISLAMIC REPUBLIC OF)                     "	0	106
+117	30	"Asia/Pacific"	"IRAQ                                           "	0	7
+118	30	"Asia/Pacific"	"ISRAEL                                         "	0	226
+119	30	"Asia/Pacific"	"JAPAN                                          "	0	2010
+120	30	"Asia/Pacific"	"JORDAN                                         "	0	44
+121	30	"Asia/Pacific"	"KAZAKHSTAN                                     "	0	74
+122	30	"Asia/Pacific"	"KOREA, REPUBLIC OF                             "	0	659
+123	30	"Asia/Pacific"	"KUWAIT                                         "	0	55
+124	30	"Asia/Pacific"	"KYRGYZSTAN                                     "	0	22
+125	30	"Asia/Pacific"	"LAO PEOPLE'S DEMOCRATIC REPUBLIC               "	0	9
+126	30	"Asia/Pacific"	"LEBANON                                        "	0	42
+127	30	"Asia/Pacific"	"MACAO                                          "	0	19
+128	30	"Asia/Pacific"	"MALAYSIA                                       "	0	245
+129	30	"Asia/Pacific"	"MALDIVES                                       "	0	10
+130	30	"Asia/Pacific"	"MONGOLIA				"	0	27
+131	30	"Asia/Pacific"	"MYANMAR                                        "	0	2
+132	30	"Asia/Pacific"	"NEPAL                                          "	0	27
+133	30	"Asia/Pacific"	"NEW ZEALAND                                    "	0	1208
+134	30	"Asia/Pacific"	"OMAN                                           "	0	5
+135	30	"Asia/Pacific"	"PAKISTAN                                       "	0	114
+136	30	"Asia/Pacific"	"PALESTINIAN TERRITORY, OCCUPIED		"	0	23
+137	30	"Asia/Pacific"	"PHILIPPINES                                    "	0	265
+138	30	"Asia/Pacific"	"QATAR                                          "	0	9
+139	30	"Asia/Pacific"	"SAUDI ARABIA                                   "	0	154
+140	30	"Asia/Pacific"	"SINGAPORE                                      "	0	406
+141	30	"Asia/Pacific"	"SRI LANKA                                      "	0	32
+142	30	"Asia/Pacific"	"SYRIAN ARAB REPUBLIC                           "	0	12
+143	30	"Asia/Pacific"	"TAJIKISTAN                                     "	0	7
+144	30	"Asia/Pacific"	"THAILAND                                       "	0	346
+145	30	"Asia/Pacific"	"TURKEY                                         "	0	275
+146	30	"Asia/Pacific"	"TURKMENISTAN                                   "	0	2
+147	30	"Asia/Pacific"	"UNITED ARAB EMIRATES                           "	0	25
+148	30	"Asia/Pacific"	"UZBEKISTAN                                     "	0	20
+149	30	"Asia/Pacific"	"VIET NAM                                       "	0	97
+150	30	"Asia/Pacific"	"YEMEN                                          "	0	3
+151	40	"Africa"	"ALGERIA                                        "	0	24
+152	40	"Africa"	"AMERICAN SAMOA                                 "	0	1
+153	40	"Africa"	"ANGOLA                                         "	0	19
+154	40	"Africa"	"BENIN                                          "	0	7
+155	40	"Africa"	"BOTSWANA                                       "	0	8
+156	40	"Africa"	"BURKINA FASO                                   "	0	8
+157	40	"Africa"	"BURUNDI                                        "	0	2
+158	40	"Africa"	"CAMEROON                                       "	0	13
+159	40	"Africa"	"CAPE VERDE                                     "	0	2
+160	40	"Africa"	"CENTRAL AFRICAN REPUBLIC                       "	0	3
+161	40	"Africa"	"CONGO                                          "	0	4
+162	40	"Africa"	"CONGO, THE DEMOCRATIC REPUBLIC OF THE          "	0	5
+163	40	"Africa"	"COOK ISLANDS                                   "	0	1
+164	40	"Africa"	"COTE D'IVOIRE                                  "	0	15
+165	40	"Africa"	"DJIBOUTI                                       "	0	1
+166	40	"Africa"	"EGYPT                                          "	0	87
+167	40	"Africa"	"EQUATORIAL GUINEA                              "	0	1
+168	40	"Africa"	"ERITREA                                        "	0	1
+169	40	"Africa"	"ETHIOPIA                                       "	0	1
+170	40	"Africa"	"FIJI                                           "	0	17
+171	40	"Africa"	"FRENCH POLYNESIA                               "	0	7
+172	40	"Africa"	"GABON                                          "	0	9
+173	40	"Africa"	"GAMBIA                                         "	0	3
+174	40	"Africa"	"GHANA                                          "	0	31
+175	40	"Africa"	"GUAM                                           "	0	13
+176	40	"Africa"	"GUINEA-BISSAU                                  "	0	1
+177	40	"Africa"	"KENYA                                          "	0	51
+178	40	"Africa"	"KIRIBATI                                       "	0	2
+179	40	"Africa"	"LESOTHO                                        "	0	5
+180	40	"Africa"	"LIBYAN ARAB JAMAHIRIYA                         "	0	4
+181	40	"Africa"	"MADAGASCAR                                     "	0	5
+182	40	"Africa"	"MALAWI                                         "	0	8
+183	40	"Africa"	"MALI                                           "	0	6
+184	40	"Africa"	"MARSHALL ISLANDS                               "	0	1
+185	40	"Africa"	"MAURITANIA                                     "	0	2
+186	40	"Africa"	"MAURITIUS                                      "	0	24
+187	40	"Africa"	"MICRONESIA, FEDERATED STATES OF                "	0	1
+188	40	"Africa"	"MOROCCO                                        "	0	13
+189	40	"Africa"	"MOZAMBIQUE                                     "	0	14
+190	40	"Africa"	"NAMIBIA                                        "	0	14
+191	40	"Africa"	"NAURU                                          "	0	1
+192	40	"Africa"	"NEW CALEDONIA                                  "	0	15
+193	40	"Africa"	"NIGER                                          "	0	2
+194	40	"Africa"	"NIGERIA                                        "	0	66
+195	40	"Africa"	"NIUE                                           "	0	1
+196	40	"Africa"	"NORFOLK ISLAND                                 "	0	3
+197	40	"Africa"	"NORTHERN MARIANA ISLANDS                       "	0	3
+198	40	"Africa"	"PALAU                                          "	0	1
+199	40	"Africa"	"PAPUA NEW GUINEA                               "	0	12
+200	40	"Africa"	"REUNION                                        "	0	1
+201	40	"Africa"	"RWANDA                                         "	0	8
+202	40	"Africa"	"SAMOA                                          "	0	5
+203	40	"Africa"	"SENEGAL                                        "	0	13
+204	40	"Africa"	"SEYCHELLES                                     "	0	8
+205	40	"Africa"	"SIERRA LEONE                                   "	0	5
+206	40	"Africa"	"SOLOMON ISLANDS                                "	0	2
+207	40	"Africa"	"SOUTH AFRICA                                   "	0	884
+208	40	"Africa"	"SUDAN					"	0	8
+209	40	"Africa"	"SWAZILAND                                      "	0	7
+210	40	"Africa"	"TANZANIA, UNITED REPUBLIC OF                   "	0	29
+211	40	"Africa"	"TOGO                                           "	0	2
+212	40	"Africa"	"TONGA                                          "	0	3
+213	40	"Africa"	"TUNISIA                                        "	0	6
+214	40	"Africa"	"TUVALU                                         "	0	1
+215	40	"Africa"	"UGANDA                                         "	0	13
+216	40	"Africa"	"VANUATU                                        "	0	4
+217	40	"Africa"	"WALLIS AND FUTUNA 	                       "	0	1
+218	40	"Africa"	"ZAMBIA                                         "	0	10
+219	40	"Africa"	"ZIMBABWE                                       "	0	10
+220	50	"Other"	"BRITISH INDIAN OCEAN TERRITORY                 "	0	2
+221	50	"Other"	"TAIWAN, PROVINCE OF CHINA                      "	0	419

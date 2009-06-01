@@ -11,11 +11,14 @@ $source=$argv[1];
 foreach( $DATES as $date )
 {
 		$sql=
-"select matched,fragmented,aggregated 
+				"drop table if exists bgp_temp2;
+				create table bgp_temp2 as select matched,fragmented,aggregated from bgp where source='$source' and on_date='$date';
+				
+				select matched,fragmented,aggregated 
 from 
-(select count(*) as matched from bgp where matched='t' and source='$source' and on_date='$date') m,
-(select count(*) as fragmented from bgp where fragmented='t' and source='$source' and on_date='$date') f,
-(select count(*) as aggregated from bgp where aggregated='t' and source='$source' and on_date='$date') a
+(select count(*) as matched from bgp_temp2 where matched='t') m,
+(select count(*) as fragmented from bgp_temp2 where fragmented='t') f,
+(select count(*) as aggregated from bgp_temp2 where aggregated='t') a
 ";
 	$row=$DB->GetRow( $sql );
 	print "$date\t$row[matched]\t$row[fragmented]\t$row[aggregated]\n";

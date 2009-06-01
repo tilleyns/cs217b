@@ -61,4 +61,3 @@ function is_AP( $country )
 		return in_array( $country, $AP );
 }
 ?>
-

@@ -1,5 +1,9 @@
 set terminal pdf
 
+set title 'Covered / covering / mathching prefixes dynamics'
+set xlabel 'Time'
+set ylabel 'Number of prefixes'
+
 #set border 3 front linetype -1 linewidth 1.000
 #set boxwidth 1 absolute
 

@@ -10,6 +10,8 @@ set timefmt "%Y-%m-%d"
 set format x "%Y/%b"
 set xdata time
 set key right
+
+set title 'Dynamics of IP allocation changes'
 set xlabel 'Date'
 set ylabel 'Prefixes'
 

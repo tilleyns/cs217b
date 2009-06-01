@@ -27,6 +27,9 @@ set key under nobox
 set grid y
 set auto y
 #set logscale y
+set title 'BGP announced prefix distribution'
+set xlabel 'Prefix length'
+set ylabel 'Number of prefixes'
 
 plot '< grep 2003-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2003', \
 	 '< grep 2004-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2004', \

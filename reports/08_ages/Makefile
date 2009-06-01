@@ -19,6 +19,7 @@ pdf: $(PDF)
 	gnuplot $< > $@
 
 ages-%.pdf: ages.plt ages.py
-	python ages.py $* > ages.csv
+	python ages.py $* > ages-$*.csv
+	cp ages-$*.csv ages.csv
 	gnuplot ages.plt > ages-$*.pdf
 

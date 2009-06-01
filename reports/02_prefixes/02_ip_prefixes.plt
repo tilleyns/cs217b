@@ -28,6 +28,10 @@ set grid y
 set auto y
 #set logscale y
 
+set title 'Allocated prefix distribution'
+set xlabel 'Prefix length'
+set ylabel 'Number of prefixes'
+
 plot '< grep 2003-01-01 rir_prefixes.txt' using 3:xtic(2) every ::12 title '2003', \
 	 '< grep 2004-01-01 rir_prefixes.txt' using 3:xtic(2) every ::12 title '2004', \
 	 '< grep 2005-01-01 rir_prefixes.txt' using 3:xtic(2) every ::12 title '2005', \

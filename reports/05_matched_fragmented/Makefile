@@ -19,6 +19,7 @@ pdf: $(PDF)
 	gnuplot $< > $@
 
 frag-%.pdf: fragmentation.plt _get.php
-	php _get.php $* > stat.txt
+	php _get.php $* > stat-$*.txt
+	cp stat-$*.txt stat.txt
 	gnuplot fragmentation.plt > frag-$*.pdf
 
