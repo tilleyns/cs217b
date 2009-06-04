@@ -28,6 +28,8 @@ set grid y
 set auto y
 #set logscale y
 
+set yrange [0:40000]
+
 set title 'BGP announced prefix distribution'
 set xlabel 'Prefix length'
 set ylabel 'Number of prefixes'

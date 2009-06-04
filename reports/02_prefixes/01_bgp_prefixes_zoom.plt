@@ -31,12 +31,14 @@ set title 'BGP announced prefix distribution'
 set xlabel 'Prefix length'
 set ylabel 'Number of prefixes'
 
-plot '< grep 2003-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2003', \
-	 '< grep 2004-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2004', \
-	 '< grep 2005-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2005', \
-	 '< grep 2006-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2006', \
-	 '< grep 2007-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2007', \
-	 '< grep 2008-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2008', \
-	 '< grep 2009-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title '2009', \
-	 '< grep 2009-04-23 bgp-amsterdam.txt' using 5:xtic(4) every ::15::23 title 'May 2009'
+set yrange [0:160000]
+
+plot '< grep 2003-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2003', \
+	 '< grep 2004-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2004', \
+	 '< grep 2005-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2005', \
+	 '< grep 2006-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2006', \
+	 '< grep 2007-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2007', \
+	 '< grep 2008-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2008', \
+	 '< grep 2009-01-01 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title '2009', \
+	 '< grep 2009-04-23 bgp-amsterdam.txt' using 5:xtic(4) every ::12::23 title 'May 2009'
 

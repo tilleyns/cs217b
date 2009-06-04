@@ -14,6 +14,9 @@ set key right
 set title 'CDF of IP allocation changes'
 set xlabel 'Date'
 set ylabel 'Prefixes'
+
+set grid y
+
 set key left
 #plot 'datafile.dat' using 5:11 with lines
 plot  \

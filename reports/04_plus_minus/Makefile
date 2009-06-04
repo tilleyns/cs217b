@@ -1,6 +1,7 @@
 DATES=2003-01-01 2004-01-01 2005-01-01 2006-01-01 2007-01-01 2008-01-01 2009-01-01 2009-04-23
 
-PDF=addremoveprefixallocculmulative.pdf  addremoveprefixalloc.pdf
+PDF=addremoveprefixallocculmulative.pdf  addremoveprefixalloc.pdf \
+	addremoveprefixallocculmulative_t.pdf  addremoveprefixalloc_t.pdf
 
 #01_bgp_ip_size.pdf 02_bgp_max_vs_ip.pdf 02_bgp_max_vs_ip_space.pdf 03_bgp_ip_space.pdf 04_bgp_ratio.pdf \
 #	$(patsubst %,05_ip_%.pdf,$(DATES))\

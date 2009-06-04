@@ -1,0 +1,102 @@
+\documentclass[conference]{IEEEtran}%,onecolumn
+\usepackage[colorlinks,linkcolor=blue,filecolor=blue,citecolor=red,bookmarksnumbered=true]{hyperref}
+\usepackage{cite}
+\usepackage{graphicx}
+
+\graphicspath{{../reports/}}
+
+\title{Measuring the Global Routing System}
+
+\author{Alexander~Afanasyev %
+%,˜\IEEEmembership{Member,˜IEEE,} 
+Brent Longstaff, and Neil~Tilley \\ %
+\small \{alexander.afanasyev, blongstaff, tilleyns\}@ucla.edu \\ \\
+\small Computer Science Department \\
+\small University of California, Los Angeles 
+} 
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	test
+\end{abstract}
+
+% \begin{figure}[htbp]
+% 	\centering
+% 		\includegraphics[width=0.5\textwidth]{00_maps/bgp_count_2003}
+% 	\caption{caption}
+% 	\label{fig:label}
+% \end{figure}
+
+\input{01_intro}
+\input{03_data}
+
+\input{04_allocations}
+\input{05_bgp}
+
+\input{02_related_work}
+
+\input{06_conclusions}
+
+% BGP:
+% 128.97.0.0/16, 131.179.0.0/16, 149.142.0.0/16, 164.67.0.0/16, 169.232.0.0/16, 192.35.210.0/24, 192.35.225.0/24, 192.154.2.0/24
+% 
+% ARIN:
+% 131.179.0.0/16||direct assignment
+% 128.97.0.0/16|AS52|direct assignment 
+% 192.154.2.0/24|AS52|direct assignment
+% 192.35.210.0/24|AS52|direct assignment 
+% 192.35.225.0/24|AS52|direct assignment
+% 149.142.0.0/16|AS52|direct assignment
+% 164.67.0.0/16|AS52|direct assignment 
+% 169.232.0.0/16|AS52|reassigned 
+% 
+% 2607:F010:0000:0000:0000:0000:0000:0000/32|AS52|direct allocation 
+
+% 
+% ( raises valid questions about how best to allocate IP addresses in future address systems, for example the incoming IPv6.) 
+% 
+
+% ..., policy for core router for everything that is more precise than 19 or 20 digit thinghies.
+
+% There are different solutionThere are number of deployed solutions to limit routing table size.
+
+
+  % shows  Another interesting aspect of the work is to investigate dynamics and contribution of the particular countries to the global routing table. The comparison of country based statistics to the global one, can reveal the current states and and future demands.
+
+
+% \section{Objectives}
+% 
+% Our objective is to perform refinement of the IPv4 allocation and BGP routing table evolution study~\cite{Meng:2005:IPv4-address}. In our research we intend to obtain statistical information of IPv4 allocations from various RIRs (ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC) and BGP routing tables from the RouteViews project~\cite{::Route-Views}. Using this statistical information we propose to analyze:
+% 
+% \begin{itemize}
+% 	\item prefix allocation dynamics (individually by RIRs and a whole);
+% 	\item prefix announcing dynamics (from the RouteViews project);
+% 	\item correlation of the ratio between allocated and announced prefixes (a combination of the first two analyses);
+% 	\item prefix allocation geography (analysis of the allocation dynamics by country);
+% 	\item prefix announcement geography (analysis of the makeup of the BGP routing table, by country of AS location);
+% 	\item the distribution and statistical trends of prefix age in the BGP routing table (measure of time that the prefix was announced); 
+% 	% {\color{red} analysis of the announced prefix age (analysis of the times prefixes are announced in the BGP table, histogram or CDF); \{analysis of the elapsed time (age) of prefix allocations before appearing as a prefix announcement announced prefix age (analysis comparison of the times between prefix allocation and a prefix announcement prefixes are announced in the BGP table, histogram or CDF);\}}
+% 	\item the number of allocated blocks to each AS (average allocations numbers, CDF);
+% \end{itemize}
+% 
+% The intent is to update and extend measurements done previously as far back as 2004. In the intervening years various questions have arisen, related to how the routing picture has changed; whether the benchmark values remain valid; when the estimated IPv4 allocation saturation point will come; where areas of greatest Internet expansion and prefix allocation are occurring; and what trends and rate of fragmentation are observable.  As a result of this research we anticipate being able to provide a refreshed baseline of understanding of the global routing system.
+% 
+% \section{Time Line}
+% 
+% The project can be divided into 4 major parts: creating utilities to gather source information, extracting statistical information about IP block allocations, extracting statistical information about announced IP prefixes, and preparation of the final report and presentation. The anticipated timeline is as follows:
+% 
+% \begin{itemize}
+% \item \textbf{Weeks 3--4}: Finalizing the set of the sources and writing the code to obtain and parse the information;
+% \item \textbf{Week 5}: Extracting allocation statistics from RIRs (ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC);
+% \item \textbf{Weeks 6--7}: Extracting statistics about announced prefixes from RouteViews;
+% \item \textbf{Weeks 8--9}: Preparation of report and presentation Report and presentation;
+% \item \textbf{Week 10}: Presentation of project.
+% \end{itemize}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{cs217}
+\end{document}

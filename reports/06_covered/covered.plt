@@ -1,6 +1,6 @@
 set terminal pdf
 
-set title 'Covered / covering / mathching prefixes dynamics'
+set title 'Covered / covering / matching prefix dynamics'
 set xlabel 'Time'
 set ylabel 'Number of prefixes'
 
