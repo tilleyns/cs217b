@@ -1,0 +1,174 @@
+#Date	#announcements	#ipSpace	ratio
+1	2004-01-01	"North America"	"AG"	ripe-amsterdam	11	10496	954.18181818182
+2	2004-01-01	"North America"	"AN"	ripe-amsterdam	2	8192	4096
+3	2004-01-01	"North America"	"BB"	ripe-amsterdam	38	49152	1293.4736842105
+4	2004-01-01	"North America"	"BM"	ripe-amsterdam	24	29952	1248
+5	2004-01-01	"North America"	"BS"	ripe-amsterdam	5	32768	6553.6
+6	2004-01-01	"North America"	"BZ"	ripe-amsterdam	4	1024	256
+7	2004-01-01	"North America"	"CA"	ripe-amsterdam	5486	40299176	7345.8213634707
+8	2004-01-01	"North America"	"CR"	ripe-amsterdam	20	133632	6681.6
+9	2004-01-01	"North America"	"CU"	ripe-amsterdam	8	76032	9504
+10	2004-01-01	"North America"	"DO"	ripe-amsterdam	28	84224	3008
+11	2004-01-01	"North America"	"GL"	ripe-amsterdam	1	8192	8192
+12	2004-01-01	"North America"	"GT"	ripe-amsterdam	131	113408	865.70992366412
+13	2004-01-01	"North America"	"HN"	ripe-amsterdam	2	1280	640
+14	2004-01-01	"North America"	"HT"	ripe-amsterdam	1	8192	8192
+15	2004-01-01	"North America"	"JM"	ripe-amsterdam	25	8192	327.68
+16	2004-01-01	"North America"	"MX"	ripe-amsterdam	1256	6448356	5134.0414012739
+17	2004-01-01	"North America"	"NI"	ripe-amsterdam	43	35584	827.53488372093
+18	2004-01-01	"North America"	"PA"	ripe-amsterdam	50	249600	4992
+19	2004-01-01	"North America"	"PR"	ripe-amsterdam	253	232063	917.24505928854
+20	2004-01-01	"North America"	"SR"	ripe-amsterdam	5	2048	409.6
+21	2004-01-01	"North America"	"SV"	ripe-amsterdam	68	77056	1133.1764705882
+22	2004-01-01	"North America"	"US"	ripe-amsterdam	69350	831294930	11986.94924297
+23	2004-01-01	"South America"	"AR"	ripe-amsterdam	1374	2376688	1729.7583697234
+24	2004-01-01	"South America"	"BO"	ripe-amsterdam	44	233984	5317.8181818182
+25	2004-01-01	"South America"	"BR"	ripe-amsterdam	880	12972544	14741.527272727
+26	2004-01-01	"South America"	"CL"	ripe-amsterdam	1088	2588889	2379.4935661765
+27	2004-01-01	"South America"	"CO"	ripe-amsterdam	445	457472	1028.0269662921
+28	2004-01-01	"South America"	"EC"	ripe-amsterdam	145	147200	1015.1724137931
+29	2004-01-01	"South America"	"PE"	ripe-amsterdam	193	502272	2602.4455958549
+30	2004-01-01	"South America"	"PY"	ripe-amsterdam	11	13312	1210.1818181818
+31	2004-01-01	"South America"	"TT"	ripe-amsterdam	57	47616	835.36842105263
+32	2004-01-01	"South America"	"UY"	ripe-amsterdam	38	167168	4399.1578947368
+33	2004-01-01	"South America"	"VE"	ripe-amsterdam	159	1128977	7100.4842767296
+34	2004-01-01	"Europe"	"AD"	ripe-amsterdam	1	8192	8192
+35	2004-01-01	"Europe"	"AL"	ripe-amsterdam	2	8192	4096
+36	2004-01-01	"Europe"	"AT"	ripe-amsterdam	2604	64475871	24760.319124424
+37	2004-01-01	"Europe"	"BA"	ripe-amsterdam	18	66560	3697.7777777778
+38	2004-01-01	"Europe"	"BE"	ripe-amsterdam	2341	62860943	26852.175565997
+39	2004-01-01	"Europe"	"BG"	ripe-amsterdam	2756	60208607	21846.374092888
+40	2004-01-01	"Europe"	"BY"	ripe-amsterdam	76	94720	1246.3157894737
+41	2004-01-01	"Europe"	"CH"	ripe-amsterdam	778	6028320	7748.4832904884
+42	2004-01-01	"Europe"	"CZ"	ripe-amsterdam	2243	61263071	27313.005349978
+43	2004-01-01	"Europe"	"DE"	ripe-amsterdam	4866	103545824	21279.454171804
+44	2004-01-01	"Europe"	"DK"	ripe-amsterdam	2322	64424031	27745.060723514
+45	2004-01-01	"Europe"	"EE"	ripe-amsterdam	2090	59798239	28611.597607656
+46	2004-01-01	"Europe"	"ES"	ripe-amsterdam	2715	69080991	25444.19558011
+47	2004-01-01	"Europe"	"FI"	ripe-amsterdam	2806	66598783	23734.420171062
+48	2004-01-01	"Europe"	"FO"	ripe-amsterdam	3	16384	5461.3333333333
+49	2004-01-01	"Europe"	"FR"	ripe-amsterdam	3481	90524715	26005.376328641
+50	2004-01-01	"Europe"	"GB"	ripe-amsterdam	2256	64096479	28411.559840426
+51	2004-01-01	"Europe"	"GI"	ripe-amsterdam	25	16384	655.36
+52	2004-01-01	"Europe"	"GR"	ripe-amsterdam	2286	60946143	26660.604986877
+53	2004-01-01	"Europe"	"HR"	ripe-amsterdam	35	324608	9274.5142857143
+54	2004-01-01	"Europe"	"HU"	ripe-amsterdam	2217	61019871	27523.622462788
+55	2004-01-01	"Europe"	"IE"	ripe-amsterdam	2123	60409375	28454.72209138
+56	2004-01-01	"Europe"	"IS"	ripe-amsterdam	23	357376	15538.086956522
+57	2004-01-01	"Europe"	"IT"	ripe-amsterdam	2948	70915807	24055.565468114
+58	2004-01-01	"Europe"	"LI"	ripe-amsterdam	5	20736	4147.2
+59	2004-01-01	"Europe"	"LT"	ripe-amsterdam	2209	59810015	27075.606609325
+60	2004-01-01	"Europe"	"LU"	ripe-amsterdam	2106	59580895	28291.023266857
+61	2004-01-01	"Europe"	"LV"	ripe-amsterdam	2162	59868639	27691.322386679
+62	2004-01-01	"Europe"	"MC"	ripe-amsterdam	15	36096	2406.4
+63	2004-01-01	"Europe"	"MD"	ripe-amsterdam	85	39936	469.83529411765
+64	2004-01-01	"Europe"	"MK"	ripe-amsterdam	65	135168	2079.5076923077
+65	2004-01-01	"Europe"	"MT"	ripe-amsterdam	2092	59616223	28497.238527725
+66	2004-01-01	"Europe"	"NL"	ripe-amsterdam	2835	72384519	25532.458201058
+67	2004-01-01	"Europe"	"NO"	ripe-amsterdam	250	6392576	25570.304
+68	2004-01-01	"Europe"	"PL"	ripe-amsterdam	2504	65475943	26148.539536741
+69	2004-01-01	"Europe"	"PT"	ripe-amsterdam	2157	60975391	28268.609643023
+70	2004-01-01	"Europe"	"RO"	ripe-amsterdam	3058	60444127	19765.901569653
+71	2004-01-01	"Europe"	"RU"	ripe-amsterdam	1415	7109377	5024.2946996466
+72	2004-01-01	"Europe"	"SE"	ripe-amsterdam	3255	68443615	21027.224270353
+73	2004-01-01	"Europe"	"SI"	ripe-amsterdam	2134	59935967	28086.207591378
+74	2004-01-01	"Europe"	"SK"	ripe-amsterdam	2154	60042215	27874.751624884
+75	2004-01-01	"Europe"	"SM"	ripe-amsterdam	1	8192	8192
+76	2004-01-01	"Europe"	"UA"	ripe-amsterdam	816	1074880	1317.2549019608
+77	2004-01-01	"Europe"	"VA"	ripe-amsterdam	1	8192	8192
+78	2004-01-01	"Europe"	"YU"	ripe-amsterdam	51	400384	7850.6666666667
+79	2004-01-01	"Asia/Pacific"	"AE"	ripe-amsterdam	56	1037824	18532.571428571
+80	2004-01-01	"Asia/Pacific"	"AM"	ripe-amsterdam	12	40448	3370.6666666667
+81	2004-01-01	"Asia/Pacific"	"AU"	ripe-amsterdam	6298	18847698	2992.6481422674
+82	2004-01-01	"Asia/Pacific"	"AZ"	ripe-amsterdam	48	48896	1018.6666666667
+83	2004-01-01	"Asia/Pacific"	"BD"	ripe-amsterdam	119	92928	780.90756302521
+84	2004-01-01	"Asia/Pacific"	"BH"	ripe-amsterdam	72	18432	256
+85	2004-01-01	"Asia/Pacific"	"BN"	ripe-amsterdam	15	86528	5768.5333333333
+86	2004-01-01	"Asia/Pacific"	"BT"	ripe-amsterdam	2	8704	4352
+87	2004-01-01	"Asia/Pacific"	"CN"	ripe-amsterdam	2950	49822696	16889.049491525
+88	2004-01-01	"Asia/Pacific"	"CY"	ripe-amsterdam	2212	59599327	26943.637884268
+89	2004-01-01	"Asia/Pacific"	"GE"	ripe-amsterdam	78	96512	1237.3333333333
+90	2004-01-01	"Asia/Pacific"	"HK"	ripe-amsterdam	1504	6792516	4516.3005319149
+91	2004-01-01	"Asia/Pacific"	"ID"	ripe-amsterdam	1023	1348352	1318.03714565
+92	2004-01-01	"Asia/Pacific"	"IL"	ripe-amsterdam	442	2030848	4594.6787330317
+93	2004-01-01	"Asia/Pacific"	"IN"	ripe-amsterdam	2548	3315200	1301.0989010989
+94	2004-01-01	"Asia/Pacific"	"IR"	ripe-amsterdam	242	903936	3735.2727272727
+95	2004-01-01	"Asia/Pacific"	"JO"	ripe-amsterdam	22	84992	3863.2727272727
+96	2004-01-01	"Asia/Pacific"	"JP"	ripe-amsterdam	2929	67872949	23172.737794469
+97	2004-01-01	"Asia/Pacific"	"KG"	ripe-amsterdam	23	53248	2315.1304347826
+98	2004-01-01	"Asia/Pacific"	"KH"	ripe-amsterdam	11	14336	1303.2727272727
+99	2004-01-01	"Asia/Pacific"	"KR"	ripe-amsterdam	3028	32026369	10576.74009247
+100	2004-01-01	"Asia/Pacific"	"KW"	ripe-amsterdam	79	536064	6785.6202531646
+101	2004-01-01	"Asia/Pacific"	"KZ"	ripe-amsterdam	85	211200	2484.7058823529
+102	2004-01-01	"Asia/Pacific"	"LA"	ripe-amsterdam	8	14848	1856
+103	2004-01-01	"Asia/Pacific"	"LB"	ripe-amsterdam	160	68608	428.8
+104	2004-01-01	"Asia/Pacific"	"LK"	ripe-amsterdam	46	171008	3717.5652173913
+105	2004-01-01	"Asia/Pacific"	"MM"	ripe-amsterdam	1	8192	8192
+106	2004-01-01	"Asia/Pacific"	"MN"	ripe-amsterdam	12	41984	3498.6666666667
+107	2004-01-01	"Asia/Pacific"	"MO"	ripe-amsterdam	16	121600	7600
+108	2004-01-01	"Asia/Pacific"	"MV"	ripe-amsterdam	13	7168	551.38461538462
+109	2004-01-01	"Asia/Pacific"	"MY"	ripe-amsterdam	269	3959168	14718.096654275
+110	2004-01-01	"Asia/Pacific"	"NP"	ripe-amsterdam	55	41216	749.38181818182
+111	2004-01-01	"Asia/Pacific"	"NZ"	ripe-amsterdam	650	4041240	6217.2923076923
+112	2004-01-01	"Asia/Pacific"	"OM"	ripe-amsterdam	11	98304	8936.7272727273
+113	2004-01-01	"Asia/Pacific"	"PH"	ripe-amsterdam	506	906096	1790.7035573123
+114	2004-01-01	"Asia/Pacific"	"PK"	ripe-amsterdam	605	201216	332.58842975207
+115	2004-01-01	"Asia/Pacific"	"PS"	ripe-amsterdam	43	146176	3399.4418604651
+116	2004-01-01	"Asia/Pacific"	"QA"	ripe-amsterdam	4	20736	5184
+117	2004-01-01	"Asia/Pacific"	"SA"	ripe-amsterdam	125	525568	4204.544
+118	2004-01-01	"Asia/Pacific"	"SG"	ripe-amsterdam	494	2545456	5152.7449392713
+119	2004-01-01	"Asia/Pacific"	"SY"	ripe-amsterdam	1	8192	8192
+120	2004-01-01	"Asia/Pacific"	"TH"	ripe-amsterdam	664	2463682	3710.3644578313
+121	2004-01-01	"Asia/Pacific"	"TM"	ripe-amsterdam	6	1536	256
+122	2004-01-01	"Asia/Pacific"	"TR"	ripe-amsterdam	403	2568448	6373.3200992556
+123	2004-01-01	"Asia/Pacific"	"UZ"	ripe-amsterdam	15	27648	1843.2
+124	2004-01-01	"Asia/Pacific"	"VN"	ripe-amsterdam	36	152576	4238.2222222222
+125	2004-01-01	"Asia/Pacific"	"YE"	ripe-amsterdam	9	2304	256
+126	2004-01-01	"Africa"	"AO"	ripe-amsterdam	10	8192	819.2
+127	2004-01-01	"Africa"	"AS"	ripe-amsterdam	1	4096	4096
+128	2004-01-01	"Africa"	"BF"	ripe-amsterdam	2	8448	4224
+129	2004-01-01	"Africa"	"BJ"	ripe-amsterdam	1	4096	4096
+130	2004-01-01	"Africa"	"BW"	ripe-amsterdam	2	512	256
+131	2004-01-01	"Africa"	"CI"	ripe-amsterdam	2	10240	5120
+132	2004-01-01	"Africa"	"CK"	ripe-amsterdam	3	16384	5461.3333333333
+133	2004-01-01	"Africa"	"CM"	ripe-amsterdam	3	16384	5461.3333333333
+134	2004-01-01	"Africa"	"DZ"	ripe-amsterdam	99	69120	698.18181818182
+135	2004-01-01	"Africa"	"EG"	ripe-amsterdam	271	818432	3020.0442804428
+136	2004-01-01	"Africa"	"ET"	ripe-amsterdam	1	8192	8192
+137	2004-01-01	"Africa"	"FJ"	ripe-amsterdam	19	75776	3988.2105263158
+138	2004-01-01	"Africa"	"GA"	ripe-amsterdam	17	8192	481.88235294118
+139	2004-01-01	"Africa"	"GH"	ripe-amsterdam	14	38912	2779.4285714286
+140	2004-01-01	"Africa"	"GM"	ripe-amsterdam	1	8192	8192
+141	2004-01-01	"Africa"	"GU"	ripe-amsterdam	69	110848	1606.4927536232
+142	2004-01-01	"Africa"	"KE"	ripe-amsterdam	75	104448	1392.64
+143	2004-01-01	"Africa"	"KI"	ripe-amsterdam	1	1024	1024
+144	2004-01-01	"Africa"	"LS"	ripe-amsterdam	1	4096	4096
+145	2004-01-01	"Africa"	"LY"	ripe-amsterdam	2	16384	8192
+146	2004-01-01	"Africa"	"MA"	ripe-amsterdam	17	147456	8673.8823529412
+147	2004-01-01	"Africa"	"ML"	ripe-amsterdam	1	4096	4096
+148	2004-01-01	"Africa"	"MP"	ripe-amsterdam	16	4096	256
+149	2004-01-01	"Africa"	"MU"	ripe-amsterdam	5	14848	2969.6
+150	2004-01-01	"Africa"	"MZ"	ripe-amsterdam	3	10240	3413.3333333333
+151	2004-01-01	"Africa"	"NA"	ripe-amsterdam	4	16640	4160
+152	2004-01-01	"Africa"	"NC"	ripe-amsterdam	54	26368	488.2962962963
+153	2004-01-01	"Africa"	"NG"	ripe-amsterdam	54	52736	976.59259259259
+154	2004-01-01	"Africa"	"PF"	ripe-amsterdam	28	7168	256
+155	2004-01-01	"Africa"	"PG"	ripe-amsterdam	6	15872	2645.3333333333
+156	2004-01-01	"Africa"	"PW"	ripe-amsterdam	1	4096	4096
+157	2004-01-01	"Africa"	"SB"	ripe-amsterdam	6	2304	384
+158	2004-01-01	"Africa"	"SD"	ripe-amsterdam	17	8192	481.88235294118
+159	2004-01-01	"Africa"	"SN"	ripe-amsterdam	4	10496	2624
+160	2004-01-01	"Africa"	"SZ"	ripe-amsterdam	2	4352	2176
+161	2004-01-01	"Africa"	"TG"	ripe-amsterdam	5	5632	1126.4
+162	2004-01-01	"Africa"	"TN"	ripe-amsterdam	12	74240	6186.6666666667
+163	2004-01-01	"Africa"	"TV"	ripe-amsterdam	1	8192	8192
+164	2004-01-01	"Africa"	"TZ"	ripe-amsterdam	37	13312	359.78378378378
+165	2004-01-01	"Africa"	"UG"	ripe-amsterdam	11	4352	395.63636363636
+166	2004-01-01	"Africa"	"VU"	ripe-amsterdam	10	6400	640
+167	2004-01-01	"Africa"	"WS"	ripe-amsterdam	4	16384	4096
+168	2004-01-01	"Africa"	"ZA"	ripe-amsterdam	664	5763584	8680.0963855422
+169	2004-01-01	"Africa"	"ZW"	ripe-amsterdam	12	12288	1024
+170	2004-01-01	"Other"	"IO"	ripe-amsterdam	1	1024	1024
+171	2004-01-01	"Other"	"TW"	ripe-amsterdam	814	17013248	20900.796068796
+172	2004-01-01	""	"GB"	ripe-amsterdam	3821	86497423	22637.378434965
+173	2004-01-01	""	""	ripe-amsterdam	2775	32716712	11789.806126126
