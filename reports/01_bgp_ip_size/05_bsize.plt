@@ -6,9 +6,10 @@ set terminal pdf
 set logscale y
 #set key left
 set xlabel 'Countries'
-set ylabel 'Number of prefixes'
+set ylabel 'Number of addresses, power of 2'
+set title  'Distribution of BGP announced IP space'
 
-set yrange [1:1e10]
+set yrange [256:1e10]
 
 unset xtics
 plot \

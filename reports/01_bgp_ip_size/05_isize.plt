@@ -8,7 +8,9 @@ set logscale y
 set xlabel 'Countries'
 set ylabel 'Number of prefixes'
 
-set yrange [1:1e10]
+set title 'Distribution of allocated IP space'
+
+set yrange [256:1e10]
 
 unset xtics
 plot \

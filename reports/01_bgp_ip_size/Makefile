@@ -14,25 +14,25 @@ all: pdf
 
 pdf: $(PDF)
 
-05_ip_%.pdf: 05_bgp_ip_country_2003.plt
+05_ip_%.pdf: 05_ip.plt
 	#php _ipv4-table.php $* > ip_stat-regions-$*.txt
 	cp ip_stat-regions-$*.txt ip_stat-regions.txt
-	gnuplot 05_bgp_ip_country_2003.plt > 05_ip_$*.pdf
+	gnuplot 05_ip.plt > 05_ip_$*.pdf
 
 05_isize_%.pdf: 05_isize.plt
 	#php _ipv4-table.php $* > ip_stat-regions-$*.txt
 	cp ip_stat-regions-$*.txt ip_stat-regions.txt
 	gnuplot 05_isize.plt > 05_isize_$*.pdf
 
-05_bgp_%.pdf: 05_bgp_country_2003.plt
+05_bgp_%.pdf: 05_bgp.plt
 	#php _bgp.php $* > bgp_stat-regions-$*.txt
 	cp bgp_stat-regions-$*.txt bgp_stat-regions.txt
-	gnuplot 05_bgp_country_2003.plt > 05_bgp_$*.pdf
+	gnuplot 05_bgp.plt > 05_bgp_$*.pdf
 
-05_bsize_%.pdf: 05_bgp_size_country_2003.plt
+05_bsize_%.pdf: 05_bsize.plt
 	#php _bgp.php $* > bgp_stat-regions-$*.txt
 	cp bgp_stat-regions-$*.txt bgp_stat-regions.txt
-	gnuplot 05_bgp_size_country_2003.plt > 05_bsize_$*.pdf
+	gnuplot 05_bsize.plt > 05_bsize_$*.pdf
 
 bgp_%.js: _bgp.php 
 	php _bgp.php $* js > bgp_$*.js

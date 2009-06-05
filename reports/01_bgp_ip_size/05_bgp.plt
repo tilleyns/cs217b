@@ -7,8 +7,11 @@ set logscale y
 #set key left
 set xlabel 'Countries'
 set ylabel 'Number of prefixes'
+set title 'Distribution of BGP announced prefixes'
 
 set yrange [1:1e6]
+
+#set arrow from 10,1 to 10,1e+06 nohead
 
 unset xtics
 plot \
