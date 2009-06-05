@@ -40,8 +40,9 @@ ip_%.js: _ipv4.php
 	gnuplot $< > $@
 
 bgp:
-	php _bgp_max.php > bgp_max.txt
-#	php _bgp_sum.php > bgp_stat.txt
+	#php _bgp_max.php > bgp_max.txt
+	php _bgp_sum.php > bgp_stat.txt
+	for i in 2 3 4 5 6; do php _bgp_sum.php $$i > bgp_stat_$$i.txt; done
 
 ip:
 	php _ipv4.php 2003-01-01 ip2003 count > ip_count_2003.js

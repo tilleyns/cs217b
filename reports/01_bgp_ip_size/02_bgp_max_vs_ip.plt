@@ -12,6 +12,6 @@ set grid y
 set title 'Number of BGP entries versus number of allocated blocks'
 
 plot \
-	'< grep amsterdam bgp_stat.txt'	using 1:3 with lines title 'BGP Announcements' lw 3, \
-	'ip_stat.txt' using 1:2 with lines title 'IP Assignments and Allocations' lw 3
+	'bgp_stat.txt'	using 1:3 with lines title 'BGP Announcements (Amsterdam)' lt 2 lw 3, \
+	'ip_stat.txt' using 1:2 with lines title 'IP Assignments and Allocations' lt 3 lw 3
 
