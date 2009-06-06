@@ -14,6 +14,12 @@ proposal.log
 proposal.pdf
 proposal.synctex.gz
 proposal_cs217.tmproj
+.DS_Store
+proposal.aux
+proposal.blg
+proposal.out
+report/report.out
+reports/.DS_Store
 report/01_intro.log
 report/06_conclusions.log
 report/report.log
