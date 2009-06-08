@@ -16,5 +16,5 @@ set xrange [0:29]
 set xtics ("Unknown" 0,"1985" 3, "1990" 8, "1995" 13,"2000" 18, "2005" 23) 
 #nomirror rotate by -45 scale 0
 
-plot 'stat.txt' using 2 notitle with impulses lw 20
+plot 'stat.txt' using 3 notitle with impulses lw 20
 #boxes 000099
