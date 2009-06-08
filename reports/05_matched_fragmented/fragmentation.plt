@@ -47,6 +47,7 @@ set auto y
 
 #set xtics nomirror rotate by -45 scale 0
 
+set xrange ['2003-01-01':'2009-04-23']
 
 plot 'stat.txt' using 1:2 title 'Matched' with linespoints lw 3, \
 	 '' u 1:3 title 'Fragmented' with linespoints lw 3,\

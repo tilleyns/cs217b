@@ -1,6 +1,6 @@
 set terminal pdf
 
-set title 'Covered / covering / matching prefix dynamics'
+set title 'Covered / covering / unique prefix dynamics'
 set xlabel 'Time'
 set ylabel 'Number of prefixes'
 
@@ -46,6 +46,7 @@ set auto y
 
 #set xtics nomirror rotate by -45 scale 0
 
+set xrange ['2003-01-01':'2009-04-23']
 
 plot 'stat.txt' u 1:4 title 'Unique' with linespoints lw 3 pt 1,\
 	 '' using 1:($2-$5) title '2+ Level Covered' with linespoints lw 3 pt 2, \
