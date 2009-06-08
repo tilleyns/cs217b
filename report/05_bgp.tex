@@ -24,7 +24,14 @@ Finally, eighth, we will provide a cumulative distribution function (CDF) of pre
 \subsection{BGP announcements by geographical region}
 One other direction of our BGP routing system study deals with characteristics of the allocations and announcements themselves.  These are in the areas of geography and age.  Some of the new areas we will examine to monitor where allocation activity is happening, and for how long a time on average.  Thus, seventh, we will give a year-on-year comparison of prefix allocations and prefix announcements by major countries, including Russia, Japan, major countries of Asia, and broad regions such as the European Union, North America, and Africa.
 
-\begin{figure}[p]
+\begin{figure*}[p]
+\centering
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BGP counts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
 	\centering
 		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/bgp_count_2003}%
 		\hspace{-0.98\columnwidth}%
@@ -32,29 +39,13 @@ One other direction of our BGP routing system study deals with characteristics o
 		\hspace{0.98\columnwidth}
 	\caption{Geographical distribution of number of announced prefixes on \textbf{January 1, 2003}}
 	\label{fig:bgp prefixes 2003}
-\end{figure}
-
-\begin{figure}[p]
-	\centering
-		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/bgp_size_2003}%
-		\hspace{-0.98\columnwidth}%
-		\includegraphics[width=1cm]{scale_bgp_size}\hspace{-1cm}%
-		\hspace{0.98\columnwidth}
-	\caption{Geographical distribution of announced IP space on \textbf{January 1, 2003}}
-	\label{fig:bgp ip space 2003}
-\end{figure}
-
-\begin{figure}[p]
-	\centering
-		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/asia_2009_prefixes}%
-		% \hspace{-0.98\columnwidth}%
-		% \includegraphics[width=1cm]{scale_bgp_count}\hspace{-1cm}%
-		% \hspace{0.98\columnwidth}
-	\caption{Geographical distribution of number of announced prefixes in Asian region on \textbf{April 23, 2009}}
-	\label{fig:bgp prefixes asia 2009}
-\end{figure}
-
-\begin{figure}[p]
+% \end{figure}
+\end{minipage}%
+%
+\quad
+%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
 	\centering
 		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/bgp_count_2009_2}%
 		\hspace{-0.98\columnwidth}%
@@ -62,9 +53,30 @@ One other direction of our BGP routing system study deals with characteristics o
 		\hspace{0.98\columnwidth}
 	\caption{Geographical distribution of number of announced prefixes on \textbf{April 23, 2009}}
 	\label{fig:bgp prefixes 2009}
-\end{figure}
+% \end{figure}
+\end{minipage}
 
-\begin{figure}[p]
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BGP sizes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
+	\centering
+		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/bgp_size_2003}%
+		\hspace{-0.98\columnwidth}%
+		\includegraphics[width=1cm]{scale_bgp_size}\hspace{-1cm}%
+		\hspace{0.98\columnwidth}
+	\caption{Geographical distribution of announced IP space on \textbf{January 1, 2003}}
+	\label{fig:bgp ip space 2003}
+% \end{figure}
+\end{minipage}%
+%
+\quad
+%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
 	\centering
 		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/bgp_size_2009_2}%
 		\hspace{-0.98\columnwidth}%
@@ -72,22 +84,50 @@ One other direction of our BGP routing system study deals with characteristics o
 		\hspace{0.98\columnwidth}
 	\caption{Geographical distribution of announced IP space on \textbf{April 23, 2009}}
 	\label{fig:bgp ip space 2009}
-\end{figure}
+% \end{figure}
+\end{minipage}
 
+\vspace{0.5cm}
 
-\begin{figure}[p]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Asia region
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
+	\centering
+		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/asia_2009_prefixes}%
+		\hspace{-0.98\columnwidth}%
+		\includegraphics[width=1cm]{scale_bgp_count}\hspace{-1cm}%
+		\hspace{0.98\columnwidth}
+	\caption{Geographical distribution of number of announced prefixes in Asian region on \textbf{April 23, 2009}}
+	\label{fig:bgp prefixes asia 2009}
+% \end{figure}
+\end{minipage}%
+%
+\quad
+%
+\begin{minipage}[b]{0.48\textwidth}
+% \begin{figure}[p]
 	\centering
 		\includegraphics[trim=0 17px 0px 76px,clip=true,width=\columnwidth]{00_maps/asia_2009_space}%
-		% \hspace{-0.98\columnwidth}%
-		% \includegraphics[width=1cm]{scale_bgp_count}\hspace{-1cm}%
-		% \hspace{0.98\columnwidth}
+		\hspace{-0.98\columnwidth}%
+		\includegraphics[width=1cm]{scale_bgp_size}\hspace{-1cm}%
+		\hspace{0.98\columnwidth}
 	\caption{Geographical distribution of announced IP space in Asian region on \textbf{April 23, 2009}}
 	\label{fig:bgp ip space asia 2009}
-\end{figure}
+% \end{figure}
+\end{minipage}
+
+\end{figure*}
 
 \clearpage
 
-\begin{table}[p]
+\begin{table*}[p]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TOP announced prefixes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.48\textwidth}
+% \begin{table}[p]
 	\begin{center}
 	\caption{Top 25 countries with the most number of announced prefixes in BGP table on \textbf{January 1, 2003}}
 	\label{tab:top25 bgp prefixes 2003}
@@ -126,52 +166,13 @@ One other direction of our BGP routing system study deals with characteristics o
 % 30      &       Spain   		&       511     &       8,921,568       \tabularnewline \hline
 	\end{tabular}
 	\end{center}
-\end{table}
-
-\begin{table}[p]
-	\begin{center}
-	\caption{Top 25 countries with the most number of announced IP space in BGP table on \textbf{January 1, 2003}}
-	\label{tab:top25 bgp ip space 2003}
-	\begin{tabular}{|l||l|r|r|}
-		\hline
-		&      \bf Country		&    Prefixes   &       IP space 		\tabularnewline \hline 
-1       &       US      		&       65849   &       759,792,816     \tabularnewline \hline
-2       &       Unknown		   	&       6258    &       68,926,314      \tabularnewline \hline
-3       &       Japan   		&       2633    &       58,905,280      \tabularnewline \hline
-4       &       Germany 		&       1934    &       46,556,556      \tabularnewline \hline
-5       &       Canada  		&       5612    &       38,912,924      \tabularnewline \hline
-6       &       UK      		&       1873    &       32,626,649      \tabularnewline \hline
-7       &       France  		&       1148    &       31,320,040      \tabularnewline \hline
-8       &       China   		&       1615    &       28,522,130      \tabularnewline \hline
-9       &       South Korea     &       2441    &       27,334,687      \tabularnewline \hline
-10      &       Netherlands     &       689     &       19,939,341      \tabularnewline \hline
-11      &       Australia       &       5762    &       17,822,159      \tabularnewline \hline
-12      &       Taiwan  		&       708     &       13,448,168      \tabularnewline \hline
-13      &       Italy   		&       791     &       13,324,288      \tabularnewline \hline
-14      &       Brazil  		&       760     &       11,580,416      \tabularnewline \hline
-15      &       Sweden  		&       1198    &       11,280,533      \tabularnewline \hline
-16      &       Spain   		&       511     &       8,921,568       \tabularnewline \hline
-17      &       Switzerland     &       560     &       7,937,424       \tabularnewline \hline
-18      &       Norway  		&       262     &       7,591,936       \tabularnewline \hline
-19      &       Finland 		&       630     &       7,307,018       \tabularnewline \hline
-20      &       Russia  		&       972     &       5,911,712       \tabularnewline \hline
-21      &       South Africa    &       618     &       5,762,180       \tabularnewline \hline
-22      &       Hong Kong       &       1261    &       5,621,473       \tabularnewline \hline
-23      &       Austria 		&       317     &       5,405,664       \tabularnewline \hline
-24      &       Mexico  		&       1059    &       5,275,520       \tabularnewline \hline
-25      &       Denmark 		&       196     &       4,169,984       \tabularnewline \hline
-% 26      &       New Zealand     &       566     &       3,828,620       \tabularnewline \hline
-% 27      &       Belgium 		&       175     &       3,796,224       \tabularnewline \hline
-% 28      &       Poland  		&       273     &       3,721,216       \tabularnewline \hline
-% 29      &       Malaysia        &       235     &       3,182,400       \tabularnewline \hline
-% 30      &       India   		&       1931    &       2,943,040       \tabularnewline \hline
-	\end{tabular}
-	\end{center}
-	\ \newline\ \newline
-\end{table}
-	
-	
-\begin{table}[p]
+% \end{table}
+\end{minipage}
+%
+\quad
+%
+\begin{minipage}[t]{0.48\textwidth}
+% \begin{table}[p]
 	\begin{center}
 	\caption{Top 25 countries with the most number of announced prefixes in BGP table on \textbf{April 23, 2009}}
 	\label{tab:top25 bgp prefixes 2009}
@@ -212,9 +213,62 @@ One other direction of our BGP routing system study deals with characteristics o
 	\end{center}
 	
 	\small	$^{*}$ -- Relative change in number of prefixes in BGP announcements from January 1, 2003 and April 23, 2009
-\end{table}
+% \end{table}
+\end{minipage}
 
-\begin{table}[p]
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TOP announced IP space
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.48\textwidth}
+% \begin{table}[p]
+	\begin{center}
+	\caption{Top 25 countries with the most number of announced IP space in BGP table on \textbf{January 1, 2003}}
+	\label{tab:top25 bgp ip space 2003}
+	\begin{tabular}{|l||l|r|r|}
+		\hline
+		&      \bf Country		&    Prefixes   &       IP space 		\tabularnewline \hline 
+1       &       US      		&       65849   &       759,792,816     \tabularnewline \hline
+2       &       Unknown		   	&       6258    &       68,926,314      \tabularnewline \hline
+3       &       Japan   		&       2633    &       58,905,280      \tabularnewline \hline
+4       &       Germany 		&       1934    &       46,556,556      \tabularnewline \hline
+5       &       Canada  		&       5612    &       38,912,924      \tabularnewline \hline
+6       &       UK      		&       1873    &       32,626,649      \tabularnewline \hline
+7       &       France  		&       1148    &       31,320,040      \tabularnewline \hline
+8       &       China   		&       1615    &       28,522,130      \tabularnewline \hline
+9       &       South Korea     &       2441    &       27,334,687      \tabularnewline \hline
+10      &       Netherlands     &       689     &       19,939,341      \tabularnewline \hline
+11      &       Australia       &       5762    &       17,822,159      \tabularnewline \hline
+12      &       Taiwan  		&       708     &       13,448,168      \tabularnewline \hline
+13      &       Italy   		&       791     &       13,324,288      \tabularnewline \hline
+14      &       Brazil  		&       760     &       11,580,416      \tabularnewline \hline
+15      &       Sweden  		&       1198    &       11,280,533      \tabularnewline \hline
+16      &       Spain   		&       511     &       8,921,568       \tabularnewline \hline
+17      &       Switzerland     &       560     &       7,937,424       \tabularnewline \hline
+18      &       Norway  		&       262     &       7,591,936       \tabularnewline \hline
+19      &       Finland 		&       630     &       7,307,018       \tabularnewline \hline
+20      &       Russia  		&       972     &       5,911,712       \tabularnewline \hline
+21      &       South Africa    &       618     &       5,762,180       \tabularnewline \hline
+22      &       Hong Kong       &       1261    &       5,621,473       \tabularnewline \hline
+23      &       Austria 		&       317     &       5,405,664       \tabularnewline \hline
+24      &       Mexico  		&       1059    &       5,275,520       \tabularnewline \hline
+25      &       Denmark 		&       196     &       4,169,984       \tabularnewline \hline
+% 26      &       New Zealand     &       566     &       3,828,620       \tabularnewline \hline
+% 27      &       Belgium 		&       175     &       3,796,224       \tabularnewline \hline
+% 28      &       Poland  		&       273     &       3,721,216       \tabularnewline \hline
+% 29      &       Malaysia        &       235     &       3,182,400       \tabularnewline \hline
+% 30      &       India   		&       1931    &       2,943,040       \tabularnewline \hline
+	\end{tabular}
+	\end{center}
+	\ \newline\ \newline
+% \end{table}
+\end{minipage}
+%
+\quad
+%
+\begin{minipage}[t]{0.48\textwidth}
+% \begin{table}[p]
 	\begin{center}
 	\caption{Top 25 countries with the most number of announced IP space in BGP table on \textbf{April 23, 2009}}
 	\label{tab:top25 bgp ip space 2009}
@@ -254,7 +308,10 @@ One other direction of our BGP routing system study deals with characteristics o
 	\end{tabular}
 	\end{center}
 	\small	$^{*}$ -- Relative change in globally announced IP space from January 1, 2003 and April 23, 2009
-\end{table}
+% \end{table}
+\end{minipage}
+
+\end{table*}
 
 \clearpage
 
