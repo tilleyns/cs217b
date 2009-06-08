@@ -42,6 +42,8 @@ $sql2="
 		order by c.region,country,s.id
 		";
 
+if( $type=="latex" ) $sql2=" order by count DESC ";
+
 $sql=$sql1." and country='EU' ".$sql2;
 $res=$DB->Execute( $sql );
 $eu=array();
@@ -87,6 +89,10 @@ $prevCountry="";
 					#print "$size, $count,  $max_size/$max_count\n";
 				$ret_s.="encodedPolygon_$row[country].setFillStyle({color:'#".hsb(240-240*log($size,2)/$max_size)."',opacity:0.7});\n";
 				$ret_c.="encodedPolygon_$row[country].setFillStyle({color:'#".hsb(240-240*log($count,2)/$max_count)."',opacity:0.7});\n";
+			}
+			else if( $type=="latex" )
+			{
+					print "$row[name]\t&&\t$row[count]\t&&\t$row[size]\t\\hline \\tabularnewline\n";
 			}
 
 	}
