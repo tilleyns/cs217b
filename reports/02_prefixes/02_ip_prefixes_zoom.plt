@@ -31,7 +31,7 @@ set title 'Allocated prefix distribution'
 set xlabel 'Prefix length'
 set ylabel 'Number of prefixes'
 
-set yrange [0:160000]
+#set yrange [0:160000]
 
 plot '< grep 2003-01-01 rir_prefixes.txt' using 3:xtic(2) every ::12::23 title '2003', \
 	 '< grep 2004-01-01 rir_prefixes.txt' using 3:xtic(2) every ::12::23 title '2004', \
