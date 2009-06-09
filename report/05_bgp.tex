@@ -219,14 +219,75 @@ announced prefixes are likely to have small longevity. This observation shows
 the substantial level of the global routing table dynamics.
 
 \subsubsection{BGP announcements by geographical region}
-One other direction of our BGP routing system study deals with characteristics
-of the allocations and announcements themselves. These are in the areas of
-geography and age. Some of the new areas we will examine to monitor where
-allocation activity is happening, and for how long a time on average. Thus,
-seventh, we will give a year-on-year comparison of prefix allocations and
-prefix announcements by major countries, including Russia, Japan, major
-countries of Asia, and broad regions such as the European Union, North
-America, and Africa.
+% One other direction of our BGP routing system study deals with
+% characteristics of the allocations and announcements themselves. These are
+% in the areas of geography and age. Some of the new areas we will examine to
+% monitor where allocation activity is happening, and for how long a time on
+% average. Thus, seventh, we will give a year-on-year comparison of prefix
+% allocations and prefix announcements by major countries, including Russia,
+% Japan, major countries of Asia, and broad regions such as the European
+% Union, North America, and Africa.
+% The last, but not least topic 
 
-\include{05_bgp_maps}
-\include{05_bgp_tables}
+As a final analysis of the global routing table content, we present a country-based analysis for the number of globally announced IP prefixes. The analysis of a fixed time snapshots points out the major contributers to the global routing table and gives an understanding of the Internet penetration throughout the world. 
+
+Table~\ref{tab:top25 bgp prefixes 2003} presents a top 25 contributors to the
+global routing table in 2003 with the indications of what actual IP address
+space is covered by the sets of announced prefixes. Table~\ref{tab:top25 bgp
+ip space 2003} gives an alternative representation for the BGP data snapshot
+from 2003, where countries are ordered by the number of used (announced) IP
+space. Due to the limited nature of our IP prefix country association
+technique (see Section~\ref{sec:data sets}), there is a considerable portion
+of prefixes for which we could not establish such association. In fact, in
+2003 the globally announced prefixes with undetermined ownership were the
+second most contributors to the routing table after United States. Third and
+forth place for the contribution to the routing table in 2003 were taken by
+Australia and Canada. It should be mentioned, that geographical distribution
+of announced IP prefixes and announced IP space has stable quasi-exponential
+distribution (Figure~\ref{fig:prefix distr} and Figure~\ref{fig:size distr})
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=\columnwidth]{01_bgp_ip_size/prefix-distr}
+	\caption{Geographical distribution of globally announced IP prefixes (log scale)}
+	\label{fig:prefix distr}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=\columnwidth]{01_bgp_ip_size/size-distr}
+	\caption{Geographical distribution of globally announced IP space (log scale)}
+	\label{fig:size distr}
+\end{figure}
+
+Table~\ref{tab:top25 bgp prefixes 2009} and Table~\ref{tab:top25 bgp ip space
+2009} present an up-to-date estimate of top 25 contributors to the global
+routing table and top 25 countries with the most announced address space. As
+we can see, a number of prefixes with undetermined ownership (and a
+corresponding IP space) decreased twice. At the same time all countries show a
+substantial growth BGP table usage. However, United States saved its leader
+positions, the rest of the table has significant changes. South Korea, China,
+Australia, and India became the second major contributors to the size of
+global routing table. At the same time, China, Japan, European Union, Germany,
+and South Korea are countries with the most announced address space. This
+observation highlight the fact that some countries are tend to extensively use
+an allocated address space (e.g., in South Korea one prefix covers on average
+5,900 addresses), and some are extremely efficient from BGP point of view
+(e.g., in Japan one prefix covers on average 37,200 addresses). If this
+difference in usage efficiency occur because of additional government
+regulations, than for future IPv6 deployment, we should consider an
+establishment of similar global regulations.
+
+As an alternative way to represent each country contribution to the global
+routing table, we present color-coded diagrams in Figures~\ref{fig:bgp
+prefixes 2003}--\ref{fig:bgp ip space asia 2009}. The figure pairs
+(Figure~\ref{fig:bgp prefixes 2003} and Figure~\ref{fig:bgp prefixes 2009},
+Figure~\ref{fig:bgp ip space 2003} and Figure~\ref{fig:bgp ip space 2009})
+allows trace the regional Internet growth dynamics. Figure~\ref{fig:bgp
+prefixes asia 2009} and Figure~\ref{fig:bgp ip space asia 2009} one more time
+emphasize different effectiveness of IP space utilization (e.g., Japan
+comparing to India of South Korea has much more addresses per announced
+prefix).
+
+\input{05_bgp_tables}
+\input{05_bgp_maps}
