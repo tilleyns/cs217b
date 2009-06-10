@@ -31,15 +31,12 @@ where the same address block is covered by several announced prefixes.
 
 \subsubsection{IP block fragmentation}
 
-Figure~\ref{fig:fragmentation} presents a correlation between allocated IP
-blocks and announced IP prefixes. The \emph{matched} curve in the figure
-represents IP blocks, which are announced in the exact form as they were
-issued by the RIRs. An example of the matched prefix announcement is when an
-ISP allocates a block of 1,024 IP addresses (equivalent to /22 block) and then
-globally announces this block as a single /22 prefix. As one can see,
-currently the number of matched prefixes accounts only 1/6$^{th}$ of the total
-number of BGP entries, and this ratio is becoming even smaller as time
-progresses.
+The contents of the BGP routing table consist of IP prefixes that either match, fragment, or aggregate together various IP allocation blocks. Figure~\ref{fig:fragmentation} shows the correlation between allocated IP
+blocks and announced IP prefixes and the relative proportions over time of these three categories. The \emph{matched} curve in the figure
+represents IP blocks that are announced in the routing table in the exact form as they were
+issued by the RIRs. An example of a matched prefix announcement is an appearance in the table of a /22 prefix (equivalent to 1,024 IP addresses) that was so issued in that form by an ISP. As is apparent in the figure,
+the number of matched prefixes accounts for 1/6 of the total
+number of BGP entries currently, and this fraction is growing smaller over time.
 
 \begin{figure}[htbp]
 	\centering
@@ -48,20 +45,17 @@ progresses.
 	\label{fig:fragmentation}
 \end{figure}
 
-This consideration allows us to conclude that ISPs are not willing to use
-allocated address space as is. Instead, they, for some reason (e.g.,
-geographical dispersion), split up allocated blocks into a number of
+ISPs are evidently not inclined to distribute address space in the form in which it was allocated. For various possible reasons (e.g.,
+geographical dispersion), ISPs split up allocated blocks into a number of
 sub-blocks and announce each of these independently. The \emph{fragmented}
-curve in Figure~\ref{fig:fragmentation} represents these split up blocks,
-which accounts for more than 83\% of all entries in the global routing table.
-That is, the allocated IP block fragmentation is a primary concern for
-future scalability of the BGP routing table.
+curve in Figure~\ref{fig:fragmentation} represents these subdivided blocks,
+which account for more than 83\% of all entries in the global routing table.
+IP block fragmentation is a primary issue for future scalability of the BGP routing table.
 
-The last curve, \emph{aggregated}, represents IP prefix announcements, which
+The lowest curve, \emph{aggregated}, represents IP prefix announcements that
 cover several allocated IP blocks. That is, in contrast to fragmentation,
-ISPs, which have several adjacent IP block allocations, are willing to
-announce them as a single IP prefix. Unfortunately, this aggregation
-technique, aimed to reduce hiking the number of entries in the routing table
+ISPs that have several adjacent IP block allocations simply announce them as a single IP prefix. As the figure illustrates, this aggregation
+technique is rarely employed in any measure.  Aimed to reduce hiking the number of entries in the routing table
 does not work. In 2003 the number of aggregated prefixes was 1,400 and this
 number increased only marginally to nearly 2,000 prefixes in 2009, which is
 nothing comparing to the total number of prefixes in the BGP routing table
