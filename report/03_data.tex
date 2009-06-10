@@ -4,40 +4,36 @@
 The aim of our project is to update and extend IP allocation and BGP routing
 table measurements performed in 2002--2004
 \cite{Meng:2003:An-analysis-of-BGP-routing} \cite{Xu:2003:IPv4-Address}
-\cite{Meng:2005:IPv4-address}. Therefore, we have focused on the time period
-from January 2003 to April 2009. Due to the enormous amount of allocation and
-BGP announcement statistics, we were forced to limit ourselves in our analyses
-to a month scale. This limitation has practically no impact on IP allocation
-analysis, because the IP allocations are generally static. On the other hand,
+\cite{Meng:2005:IPv4-address}. We have therefore focused on the time period
+from January 2003 to April 2009. Due to the enormous quantity of allocation and
+BGP announcement data, we limited the analysis level on a per-month scale. On the IP allocation analysis, this limitation has no significant impact because IP allocations are generally static. On the other hand,
 due to the dynamic nature of the BGP routing table, collected data does not
-represent global routing table contents very precisely. However, the obtained
+represent the global routing table contents as precisely. However, the obtained
 results are highly consistent with previous analyses
 \cite{Meng:2005:IPv4-address} and up-to-date BGP measurements
-\cite{::IPv4-Address-Report}. We are also claiming that the obtained results
-represent lower bounds of the high level dynamic trends.
+\cite{::IPv4-Address-Report}. We also assert that the obtained results
+represent lower bounds of the high-level dynamic trends.
 
 % \subsection{Data sets}
 
 IP allocation data was collected from five Regional Internet Registries (RIRs)
 \cite{::IANA----Number}, -- ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC, which,
-with some exceptions, cover the designated world regions. Due to the fact that
-AfriNIC RIR has been officially recognized only on April 8, 2005
-\cite{AKPLOGAN:2005:AfriNIC-now-officially}, IP address space assignment for
-the African region before 2005 was maintained by all others RIRs. Moreover,
-after 2005 some small part of the statistical information was overlapped
+with minor exceptions, cover the designated world regions. Because of the fact that
+AfriNIC RIR was officially recognized only as of April 8, 2005
+\cite{AKPLOGAN:2005:AfriNIC-now-officially}, IP address space assignments for
+the African region prior to 2005 were maintained by all other RIRs. Moreover,
+after 2005 some small part of the statistical information was overlapping
 between AfriNIC and other RIRs.
 
 BGP data are monitored by two separate data collection projects: the
 University of Oregon Route Views project \cite{::Route-Views} and the RIPE NCC
-Routing Information Service (RIS) project \cite{::RIS}. These projects
-deployed BGP monitors in more than 20 different locations, including the
-United States, the European Union, and Japan, which collect data from more
-than 600 real BGP peers. For our project we collected statistical data from 5
-BGP monitors (one in Oregon for RouteViews project and four in Amsterdam,
-London, Tokyo, and Moscow for RIS project). All discovered trends are
-consistent over all 5 monitors. That's why we, for space conservation
-purposes, decided to present BGP analysis based on data collected from
-RouteViews project.
+Routing Information Service (RIS) project \cite{::RIS}. These projects have
+deployed BGP monitors in more than 20 locations, including the
+United States, the European Union, and Japan. These monitors collect data from more
+than 600 BGP peers. In this project we collected statistical data from 5
+BGP monitors (one in Oregon for the Route Views project and four for the RIS project in Amsterdam,
+London, Tokyo, and Moscow). All discovered trends are
+consistent qualitatively over all 5 monitors. For this reason, we felt confident that presenting the findings from just the Route Views project is representative of all our BGP analysis.
 
 % \subsection{Methodology}
 %	
