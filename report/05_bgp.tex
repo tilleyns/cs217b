@@ -2,17 +2,14 @@
 \label{sec:bgp}
 
 In this section we present an evaluation of the global routing table from 2003
-to 2009. The first point of our interest is to analyze the contributions of
-causes to the global routing table growth. That is, we determine how well ISPs
-tend to use an allocated address space and how this address space is
+to 2009. We first analyze contributing causes to the growth of the global routing table. This involves assessing a measure of how well ISPs
+tend to use an allocated address space and how address spaces are
 subdivided. The second point of interest is to analyze the contents of the BGP
-routing table itself. This includes an analysis of the level of the
-overlapping IP prefix announcements (i.e., how many individual prefixes are
-also parts of bigger prefixes present in the same routing table). We also show
-the stability of the routing table contents. For this purpose, we calculate
-the time periods during which each individual prefix was visible to the
-selected BGP monitor. Finally, we present an analysis of the BGP routing table
-dynamics grouped by the geographical region and point out countries with the
+routing table itself. This includes determining the extent that IP prefix announcements overlap (i.e., how many individual prefixes are
+also parts of bigger prefixes present in the same routing table). We also discuss a measure of the stability of the routing table contents. For this measurement, we calculate
+the time period during which an individual prefix was visible to the
+BGP monitor. Finally, in an analogous fashion to the previos section, we present an analysis of the BGP routing table
+dynamics grouped by the geographical region.  We conclude with identifying  countries with the
 largest number of announced prefixes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,13 +23,10 @@ largest number of announced prefixes.
 The BGP routing table growth is much faster than the growth of the number of
 the allocated IP blocks (see Figure~\ref{fig:BGP vs RIR}). Currently, the
 average number of entries in the global routing table is more than 3 times
-more than the total number of allocated IP blocks. This increase has a dual
-nature. Firstly, ISPs tend to subdivide allocated IP blocks into several
+the number of IP blocks that have been allocated [ (300,000+:97,000+) FILL IN BLANKS, IN COMPARISON TO WHAT OTHER NUMBER? ]. This multiplication in size reflects two primary practices. First, ISPs tend to subdivide allocated IP blocks into several
 individual prefixes and announce them separately. For example, such behavior
-is very typical for the transnational providers and providers which lend parts
-of allocated address space to their customers, which, in their case,
-independently announce lent IP address blocks. Secondly, various traffic
-engineering techniques (traffic balancing, multihoming, etc) create situations
+is typical among transnational providers as well as among ISP customers that have been lent parts of their providers' address space and in turn independently announce subdivided IP address blocks. Second, various traffic
+engineering techniques (traffic balancing, multihoming, etc.) give rise to situations
 where the same address block is covered by several announced prefixes.
 
 \subsubsection{IP block fragmentation}
