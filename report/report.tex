@@ -23,15 +23,23 @@ Brent Longstaff, and Neil~Tilley \\ %
 
 BGP is currently the most important protocol for insuring the global
 connectivity of the Internet. This imposes a great deal of responsibility on
-BGP, and creates a number of challenges for it. A primary concern is the
-impact of the currently deployed BGP-based techniques, such as traffic
-engineering, on the global routing table scalability. In our study we present
-a two-plane analysis of the BGP announcements for the last 6 years. First, we
-correlate globally announced prefixes to IP allocation data and show how well
-ISPs tend to use the allocated address space. Second, we self-correlate BGP
-announcement data and show various factors contributing to the routing table
-growth. We also document where routing announcements originate around the
-world which shows the spread of Internet connectivity around the globe.
+BGP and creates a number of challenges for it. A primary concern is the impact
+of various currently deployed BGP-based techniques on the scalability of the
+global routing table. While these techniques provide ISPs with additional
+traffic management services (e.g., balancing, multihoming, etc), they have
+expanded the routing table size at a pace that exceeds the allocation rate and
+is increasing. In our study we present a two-plane analysis of BGP
+announcements for the period 2003--2009. First, we correlate globally
+announced prefixes with IP allocation data and show how efficiently ISPs
+announce their allocated address space. Second, we correlate BGP announcement
+data to itself and show various internal factors contributing to the routing
+table growth. Finally, we also document in which regions of the world routing
+announcements have been originating during the period of this study, and we
+draw conclusions about the spread of Internet connectivity globally.
+
+% Second, we note occurrences of IP prefix spaces being announced multiple
+% times at increasing levels of detail and show these as one of the various
+% factors contributing to the routing table growth.
 
 \end{abstract}
 
