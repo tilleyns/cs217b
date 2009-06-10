@@ -1,20 +1,19 @@
 \section{BGP routing table}
 \label{sec:bgp}
 
-In this section we present an evaluation of the global routing table
-from 2003 to 2009. The first point of our interest is to analyze contribution
-of causes to the global routing table growth. That is, we determine how well
-ISPs tend to use an allocated address space and how this address space is
+In this section we present an evaluation of the global routing table from 2003
+to 2009. The first point of our interest is to analyze the contributions of
+causes to the global routing table growth. That is, we determine how well ISPs
+tend to use an allocated address space and how this address space is
 subdivided. The second point of interest is to analyze the contents of the BGP
-routing table itself. This include an analysis of a level of the overlapping
-IP prefix announcements (i.e., how many individual prefixes are also parts of
-the bigger prefixes, present in the same routing table). We also show the
-stability of the routing table contents. For this purpose, we calculate time
-periods during which each individual prefix was visible by the selected BGP
-monitor. Finally, we present an evaluation of the BGP routing table entries in
-geographical layer, including a tabular and graphical representation of the
-BGP entries and numbers of IP addresses, covered by these BGP entries, each
-country contributes to the global routing table.
+routing table itself. This includes an analysis of the level of the
+overlapping IP prefix announcements (i.e., how many individual prefixes are
+also parts of bigger prefixes present in the same routing table). We also show
+the stability of the routing table contents. For this purpose, we calculate
+the time periods during which each individual prefix was visible by the
+selected BGP monitor. Finally, we present an analysis of the BGP routing table
+dynamics grouped by the geographical region and point out countries with the
+most number of announced prefixes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,28 +23,29 @@ country contributes to the global routing table.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The BGP routing table growth is much faster than growth of the number of the
-allocated IP blocks (see Figure~\ref{fig:BGP vs RIR}). Currently, the average
-number of entries in the global routing table in more than 3 times more than
-total number of allocated IP blocks. This increase has dual nature. Firstly,
-ISPs tend to subdivide allocated IP blocks into several individual prefixes
-and announce them separately. For example, such behavior is very typical for
-the transnational providers and providers which lend parts of allocated
-address space to its customers, which, in their case, independently announce
-lent IP address block. Secondly, various traffic engineering techniques
-(traffic balancing, multihoming, etc) create situations when the same address
-block is covered by several announced prefixes.
+The BGP routing table growth is much faster than the growth of the number of
+the allocated IP blocks (see Figure~\ref{fig:BGP vs RIR}). Currently, the
+average number of entries in the global routing table is more than 3 times
+more than the total number of allocated IP blocks. This increase has a dual
+nature. Firstly, ISPs tend to subdivide allocated IP blocks into several
+individual prefixes and announce them separately. For example, such behavior
+is very typical for the transnational providers and providers which lend parts
+of allocated address space to their customers, which, in their case,
+independently announce lent IP address blocks. Secondly, various traffic
+engineering techniques (traffic balancing, multihoming, etc) create situations
+where the same address block is covered by several announced prefixes.
 
 \subsubsection{IP block fragmentation}
 
 Figure~\ref{fig:fragmentation} presents a correlation between allocated IP
-blocks and announced IP prefixes. The \emph{matched} curve on the figure
+blocks and announced IP prefixes. The \emph{matched} curve in the figure
 represents IP blocks, which are announced in the exact form as they were
 issued by the RIRs. An example of the matched prefix announcement is when an
 ISP allocates a block of 1,024 IP addresses (equivalent to /22 block) and then
 globally announces this block as a single /22 prefix. As one can see,
 currently the number of matched prefixes accounts only 1/6$^{th}$ of the total
-number of BGP entries, and this ratio tends to be even smaller in future.
+number of BGP entries, and this ratio is becoming even smaller as time
+progresses.
 
 \begin{figure}[htbp]
 	\centering
@@ -54,49 +54,51 @@ number of BGP entries, and this ratio tends to be even smaller in future.
 	\label{fig:fragmentation}
 \end{figure}
 
-This consideration allows us to make a conclusion that ISPs are not willing to
-use allocated address space as is. Instead, they for some reason (e.g.,
-geographical dispersion) split up allocated block into a number of sub-blocks
-and announce each of the independently. The \emph{fragmented} curve in
-Figure~\ref{fig:fragmentation} represents these split up blocks, which
-accounts more than 83\% of all entries in global routing table. That is, the
-allocated IP block fragmentation is a primary concern for the future BGP
-protocol scalability.
+This consideration allows us to conclude that ISPs are not willing to use
+allocated address space as is. Instead, they, for some reason (e.g.,
+geographical dispersion), split up allocated blocks into a number of
+sub-blocks and announce each of these independently. The \emph{fragmented}
+curve in Figure~\ref{fig:fragmentation} represents these split up blocks,
+which accounts for more than 83\% of all entries in the global routing table.
+That is, the allocated IP block fragmentation is a primary concern for
+future scalability of the BGP routing table.
 
 The last curve, \emph{aggregated}, represents IP prefix announcements, which
-cover several allocated IP blocks. That is, in contrast to the fragmentation,
-ISPs, which has several adjacent IP block allocations, are willing to announce
-them as a single IP prefix. Unfortunately, the aggregation technique aimed to
-reduce hiking number of entries in routing table does not work. In 2003 a
-number of aggregated prefixes was 1,400 and this number increased marginally
-to nearly 2,000 prefixes in 2009, which is nothing comparing to the total
-number of prefixes in the BGP routing table ($\approx$300k).
+cover several allocated IP blocks. That is, in contrast to fragmentation,
+ISPs, which have several adjacent IP block allocations, are willing to
+announce them as a single IP prefix. Unfortunately, this aggregation
+technique, aimed to reduce hiking the number of entries in the routing table
+does not work. In 2003 the number of aggregated prefixes was 1,400 and this
+number increased only marginally to nearly 2,000 prefixes in 2009, which is
+nothing comparing to the total number of prefixes in the BGP routing table
+($\approx$300k).
 
 One surprising conclusion can be made from this analysis. ISPs do not tend to
 globally announce the allocated IP space in the original form, no matter of
 what size IP block is allocated. This conclusion can serve as a base of
 different conclusion concerning future IPv6 deployment. Without a major change
 in the BGP protocol, an increase of the allocation IP block size (according to
-the current RIRs policy, the minimum allocation IPv6 block is
-/32\cite{APNIC:2009:IPv6-Address}) will not help to significantly
-reduce the size of global routing table. The only targets for the reduction
-are matched IP prefixes (i.e., ISPs which currently use all allocated IP space
-as a single block will likely to use a bigger IPv6 space also as a single
-block). That is, the upper bound of IP space level optimization is limited by
-the number of matched prefixes (less than 17\% of all prefixes).
+the current RIRs policy, the minimum allocation for an IPv6 block is
+/32\cite{APNIC:2009:IPv6-Address} which costs the same as a /19 or /20 IPv4
+address block \cite{ARIN:2009:Annual-Fee-Scedule}) will not help to
+significantly reduce the size of global routing table. The only targets for
+the reduction are matched IP prefixes (i.e., ISPs which currently use all
+allocated IP space as a single block will likely to use a bigger IPv6 space
+also as a single block). That is, the upper bound of IP space level
+optimization is limited by the number of matched prefixes (less than 17\% of
+all prefixes).
 
 \subsubsection{Duplicate announcements of IP blocks}
 
-BGP routing table has a consistent trends of containing a large portion of
-prefixes, which duplicate each other (Figure~\ref{fig:covered}). In theory,
-the IP address coverage duplication in a routing table, where the actual route
-is calculated by matching the destination address with the longest available
-prefix, is one of the effective ways to reduce a size of the routing table
-itself. For example, consider an ISP owning a /8 address block and wanting to
-route some /24 block using a different path than the rest of the block. It is
-much effective to use a small duplication of address space and only two
-entries in routing table, instead of no duplication and 65,536 individual
-entries.
+The BGP routing table has a consistent trend of containing a large portion of
+prefixes which duplicate each other (Figure~\ref{fig:covered}). In theory, IP
+address coverage duplication in a routing table, where the actual route is
+calculated by matching the destination address with the longest available
+prefix, is an effective way to reduce the size of the routing table itself.
+For example, consider an ISP owning a /8 address block and wanting to route
+some /24 block using a different path than the rest of the block. It is much
+effective to use a small duplication of address space and only two entries in
+the routing table, instead of no duplication and 65,536 individual entries.
 
 \begin{figure}[htbp]
 	\centering
@@ -107,11 +109,11 @@ entries.
 
 The reality shows that the fundamental IP routing feature of longest prefix
 matching is used very extensively. As we can see in Figure~\ref{fig:covered}
-(\emph{1 level} curves) number of IP prefixes in BGP table which are covered
-by exactly one bigger prefix is nearly the same as number of unique prefixes
-(i.e., base prefixes). Moreover, there are substantial amount of prefixes
-which has several layers of coverage (several duplication levels, \emph{2+
-level} curve).
+(\emph{1 level} curves), the number of IP prefixes in BGP table which are
+covered by exactly one bigger prefix is nearly the same as the number of
+unique prefixes (i.e., base prefixes). Moreover, there is a substantial amount
+of prefixes which have several layers of coverage (several duplication levels,
+\emph{2+ level} curve).
 
 This high numbers indicate a presence of some additional (besides the
 theoretical routing table optimization) incentives for prefix duplication. One

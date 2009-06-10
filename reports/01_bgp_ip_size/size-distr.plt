@@ -6,7 +6,7 @@ set terminal pdf
 #set key under nobox
 set grid y
 set auto y
-#set logscale y
+set logscale y
 
 #set yrange [0:40000]
 
