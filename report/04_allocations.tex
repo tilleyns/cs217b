@@ -8,8 +8,12 @@ as shown in figure \ref{fig:IP allocations}. The number of allocations has
 increased for every prefix prefix length, but at different rates. In 2003, /24
 was the most popular size, as it is today, but there were only about half as
 many /20 allocations as /19 ones, whereas in 2008 they were about the same.
-There has been almost no increase in /16 blocks. This shows the growing trend towards smaller blocks as the IPv4 address space approaches saturation.
-Throughout the six-year period, most IP allocations are /24 blocks. The next most popular block size is /16, followed by /19 and /20. The smaller block sizes (/19 and smaller) have had a larger increase in usage than /16, /17, and /18.
+There has been almost no increase in /16 blocks. This shows the growing trend
+towards smaller blocks as the IPv4 address space approaches saturation.
+Throughout the six-year period, most IP allocations are /24 blocks. The next
+most popular block size is /16, followed by /19 and /20. The smaller block
+sizes (/19 and smaller) have had a larger increase in usage than /16, /17, and
+/18.
 
 \begin{figure}[htbp]
  	\centering
@@ -27,9 +31,16 @@ Throughout the six-year period, most IP allocations are /24 blocks. The next mos
 %  	\label{fig:IP allocations new and gone}
 % \end{figure}
 
-Figure \ref{fig:IP allocations new and gone} shows that the number of allocated IP prefixes has increased by over 40,000 in the past six years. Some of the increase was due to new allocations, while a smaller amount was due to prefix splitting (where one prefix was split into smaller prefixes). Not all changes increased the number of allocations, however. Some prefixes disappeared in the same time period, although the number of new ones greatly outpaced the disappearances. Another 
-dynamic which did not directly affect the number of allocations was prefix extension, where an existing prefix increased its size by including adjacent, unallocated address space (e.g. a /16 prefix might become a /15 prefix by
-including the adjacent /16 address space).
+Figure \ref{fig:IP allocations new and gone} shows that the number of
+allocated IP prefixes has increased by over 40,000 in the past six years. Some
+of the increase was due to new allocations, while a smaller amount was due to
+prefix splitting (where one prefix was split into smaller prefixes). Not all
+changes increased the number of allocations, however. Some prefixes
+disappeared in the same time period, although the number of new ones greatly
+outpaced the disappearances. Another dynamic which did not directly affect the
+number of allocations was prefix extension, where an existing prefix increased
+its size by including adjacent, unallocated address space (e.g. a /16 prefix
+might become a /15 prefix by including the adjacent /16 address space).
 
 \begin{figure}[htbp]
     \centering
@@ -38,7 +49,16 @@ including the adjacent /16 address space).
     \label{fig:IP allocations new and gone}
 \end{figure}
 
-Figure \ref{fig:alloc ages total} plots the number of prefixes allocated each year, according to snapshots taken in the years from 2003 to 2009 (shown in different colors). It is interesting to note that the number of prefixes allocated in the 90s has increased since then, especially in the past year. This is the effect of prefix splitting, where a larger allocated block is split into multiple blocks. When blocks are split, the resulting blocks retain the year of origin as the block they were part of. The graph shows that many of the existing allocations originated in the 90s, but also suggests that many of these are split pieces of the fewer, larger blocks that were actually allocated back then.
+Figure \ref{fig:alloc ages total} plots the number of prefixes allocated each
+year, according to snapshots taken in the years from 2003 to 2009 (shown in
+different colors). It is interesting to note that the number of prefixes
+allocated in the 90s has increased since then, especially in the past year.
+This is the effect of prefix splitting, where a larger allocated block is
+split into multiple blocks. When blocks are split, the resulting blocks retain
+the year of origin as the block they were part of. The graph shows that many
+of the existing allocations originated in the 90s, but also suggests that many
+of these are split pieces of the fewer, larger blocks that were actually
+allocated back then.
 
 \begin{figure}[htbp]
 	\centering
@@ -49,18 +69,18 @@ Figure \ref{fig:alloc ages total} plots the number of prefixes allocated each ye
 
 \subsection{Unaligned allocation}
 
-Unaligned IP allocations are ones whose size
-is not a power of two. For instance, a block of 1000 addresses could be
-allocated instead of 1024. The latter could be represented by a single /22
-prefix, whereas the former would need a /23, /24, /25, /26, /27, and /29
-prefix to express the allocation. Allocations usually have size of a power of
-two, so a single prefix will suffice. There are not very many unaligned
-allocations because they are wasteful of BGP table space and have no
-advantages over aligned ones. Figure \ref{fig:unaligned IP allocations} shows
-the distribution of such allocations. Most were allocated between 1992 and
-1995, although there have been some every year since then. Compared to the
-size of the entire routing table, these allocations are insignificant, but it
-is interesting that they exist at all, since RIRs should know better.
+Unaligned IP allocations are ones whose size is not a power of two. For
+instance, a block of 1000 addresses could be allocated instead of 1024. The
+latter could be represented by a single /22 prefix, whereas the former would
+need a /23, /24, /25, /26, /27, and /29 prefix to express the allocation.
+Allocations usually have size of a power of two, so a single prefix will
+suffice. There are not very many unaligned allocations because they are
+wasteful of BGP table space and have no advantages over aligned ones. Figure
+\ref{fig:unaligned IP allocations} shows the distribution of such allocations.
+Most were allocated between 1992 and 1995, although there have been some every
+year since then. Compared to the size of the entire routing table, these
+allocations are insignificant, but it is interesting that they exist at all,
+since RIRs should know better.
 
 \begin{figure}[htbp]
  	\centering
@@ -68,70 +88,40 @@ is interesting that they exist at all, since RIRs should know better.
 	\caption{Unaligned IP allocations per year}
  	\label{fig:unaligned IP allocations}
 \end{figure}
-\subsection{Allocation by geographical region}
-The following diagrams and tables present a country-based analysis for the number of allocated IP prefixes. The analysis of a fixed time snapshots of IP allocations shows which countries allocate more prefixes and gives an understanding of the Internet penetration throughout the world.
 
-Table~\ref{tab:top25 rir prefixes 2003} presents the 25 countries that have allocated the most prefixes along with the indications of what actual IP address
-space is covered by the sets of allocated IP blocks. Table~\ref{tab:top25 rir
-ip space 2003} gives an alternative representation for the BGP data snapshot
-from 2003, where countries are ordered by the number of used (allocated) IP
-space. 
+\subsection{Allocation by geographical region}
+
+The following diagrams and tables present a country-based analysis for the
+number of allocated IP prefixes. The analysis of a fixed time snapshots of IP
+allocations shows which countries allocate more prefixes and gives an
+understanding of the Internet penetration throughout the world.
+
+Table~\ref{tab:top25 rir prefixes 2003} presents the 25 countries that have
+allocated the most prefixes along with the indications of what actual IP
+address space is covered by the sets of allocated IP blocks.
+Table~\ref{tab:top25 rir ip space 2003} gives an alternative representation
+for the BGP data snapshot from 2003, where countries are ordered by the number
+of used (allocated) IP space.
 
 Table~\ref{tab:top25 rir prefixes 2009} and Table~\ref{tab:top25 rir ip space
 2009} present an up-to-date estimate of top 25 contributors to the global
-routing table and top 25 countries with the most announced address space. The tables show that there have been changes in the amount of allocations of some countries relative to others. For example, Canada was a clear second back in 2003, but now it is tied with European countries and behind Australia. It is also interesting to note that Japan is second in terms of allocated IP space, but only eighth in number of allocated blocks, meaning that Japan's allocations efficiently cover their IP space.
+routing table and top 25 countries with the most announced address space. The
+tables show that there have been changes in the amount of allocations of some
+countries relative to others. For example, Canada was a clear second back in
+2003, but now it is tied with European countries and behind Australia. It is
+also interesting to note that Japan is second in terms of allocated IP space,
+but only eighth in number of allocated blocks, meaning that Japan's
+allocations efficiently cover their IP space.
 
-Figures~\ref{fig:rir prefixes 2003}--\ref{fig:rir ip space asia 2009} show the annual number of allocations by colors on a map of the world. The figure pairs (Figure~\ref{fig:rir prefixes 2003} and Figure~\ref{fig:rir prefixes 2009},
+Figures~\ref{fig:rir prefixes 2003}--\ref{fig:rir ip space asia 2009} show the
+annual number of allocations by colors on a map of the world. The figure pairs
+(Figure~\ref{fig:rir prefixes 2003} and Figure~\ref{fig:rir prefixes 2009},
 Figure~\ref{fig:rir ip space 2003} and Figure~\ref{fig:rir ip space 2009})
 allows trace the regional Internet growth dynamics. Figure~\ref{fig:rir
-prefixes asia 2009} and Figure~\ref{fig:rir ip space asia 2009} 
-emphasize one more time the varying size of IP allocations 
-(e.g., Japan covers much more IP space with few allocated blocks).
+prefixes asia 2009} and Figure~\ref{fig:rir ip space asia 2009} emphasize one
+more time the varying size of IP allocations (e.g., Japan covers much more IP
+space with few allocated blocks).
 
 \input{04_allocations_tables}
 \input{04_allocations_maps}
 
-
-%\subsection{Allocation changes by geographical region}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2003-01-01}
-% 	\caption{Increase in allocations by region 2003}
-%  	\label{fig:increase2003}
-% \end{figure}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2004-01-01}
-% 	\caption{Increase in allocations by region 2004}
-%  	\label{fig:increase2004}
-% \end{figure}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2005-01-01}
-% 	\caption{Increase in allocations by region 2005}
-%  	\label{fig:increase2005}
-% \end{figure}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2006-01-01}
-% 	\caption{Increase in allocations by region 2006}
-%  	\label{fig:increase2006}
-% \end{figure}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2007-01-01}
-% 	\caption{Increase in allocations by region 2007}
-%  	\label{fig:increase2007}
-% \end{figure}
-% \begin{figure}[htbp]
-%  	\centering
-%  		 \includegraphics[width=0.5\textwidth]{04_2_plus_minus_countries/plus_minus_2008-01-01}
-% 	\caption{Increase in allocations by region 2008}
-%  	\label{fig:increase2008}
-% \end{figure}
-
-%As can be seen in figures \ref{fig:increase2003}-\ref{fig:increase2008}, the
-%increase in allocations each years has no clear trend and does not appear to
-%vary in a consistent way. In each country in can vary significantly from one
-%year to the next. The same countries do not allocated more than others every
-%year.
