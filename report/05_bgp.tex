@@ -2,15 +2,19 @@
 \label{sec:bgp}
 
 In this section we present an evaluation of the global routing table from 2003
-to 2009. We first analyze contributing causes to the growth of the global routing table. This involves assessing a measure of how well ISPs
-tend to use an allocated address space and how address spaces are
-subdivided. The second point of interest is to analyze the contents of the BGP
-routing table itself. This includes determining the extent that IP prefix announcements overlap (i.e., how many individual prefixes are
-also parts of bigger prefixes present in the same routing table). We also discuss a measure of the stability of the routing table contents. For this measurement, we calculate
-the time period during which an individual prefix was visible to the
-BGP monitor. Finally, in an analogous fashion to the previos section, we present an analysis of the BGP routing table
-dynamics grouped by the geographical region.  We conclude with identifying  countries with the
-largest number of announced prefixes.
+to 2009. We first analyze contributing causes to the growth of the global
+routing table. This involves assessing a measure of how well ISPs tend to use
+an allocated address space and how allocated address blocks are subdivided.
+The second point of interest is to analyze the contents of the BGP routing
+table itself. This includes determining the extent that IP prefix
+announcements overlap (i.e., how many individual prefixes are also parts of
+bigger prefixes present in the same routing table). We also discuss a measure
+of the stability of the routing table contents. For this measurement, we
+calculate the time period during which an individual prefix was visible to the
+BGP monitor. Finally, in an analogous fashion to the previos section, we
+present an analysis of the BGP routing table dynamics grouped by the
+geographical region. We conclude with identifying countries with the largest
+number of announced prefixes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,21 +26,30 @@ largest number of announced prefixes.
 
 The BGP routing table growth is much faster than the growth of the number of
 the allocated IP blocks (see Figure~\ref{fig:BGP vs RIR}). Currently, the
-average number of entries in the global routing table is more than 3 times
-the number of IP blocks that have been allocated [ (300,000+:97,000+) FILL IN BLANKS, IN COMPARISON TO WHAT OTHER NUMBER? ]. This multiplication in size reflects two primary practices. First, ISPs tend to subdivide allocated IP blocks into several
-individual prefixes and announce them separately. For example, such behavior
-is typical among transnational providers as well as among ISP customers that have been lent parts of their providers' address space and in turn independently announce subdivided IP address blocks. Second, various traffic
-engineering techniques (traffic balancing, multihoming, etc.) give rise to situations
-where the same address block is covered by several announced prefixes.
+average number of entries in the global routing table is more than 3 times the
+number of IP blocks that have been allocated (see Figure~\ref{fig:BGP vs
+RIR}). This multiplication in size reflects two primary practices. First, ISPs
+tend to subdivide allocated IP blocks into several individual prefixes and
+announce them separately. For example, such behavior is typical among
+transnational providers as well as among ISP customers that have been lent
+parts of their providers' address space and in turn independently announce
+subdivided IP address blocks. Second, various traffic engineering techniques
+(traffic balancing, multihoming, etc.) give rise to situations where the same
+address block is covered by several announced prefixes.
 
 \subsubsection{IP block fragmentation}
 
-The contents of the BGP routing table consist of IP prefixes that either match, fragment, or aggregate together various IP allocation blocks. Figure~\ref{fig:fragmentation} shows the correlation between allocated IP
-blocks and announced IP prefixes and the relative proportions over time of these three categories. The \emph{matched} curve in the figure
-represents IP blocks that are announced in the routing table in the exact form as they were
-issued by the RIRs. An example of a matched prefix announcement is an appearance in the table of a /22 prefix (equivalent to 1,024 IP addresses) that was so issued in that form by an ISP. As is apparent in the figure,
-the number of matched prefixes accounts for 1/6 of the total
-number of BGP entries currently, and this fraction is growing smaller over time.
+The contents of the BGP routing table consist of IP prefixes that either
+match, fragment, or aggregate together various IP allocation blocks.
+Figure~\ref{fig:fragmentation} shows the correlation between allocated IP
+blocks and announced IP prefixes and the relative proportions over time of
+these three categories. The \emph{matched} curve in the figure represents IP
+blocks that are announced in the routing table in the exact form as they were
+issued by the RIRs. An example of a matched prefix announcement is an
+appearance in the table of a /22 prefix (equivalent to 1,024 IP addresses)
+that was so issued in that form by an ISP. As is apparent in the figure, the
+number of matched prefixes accounts for 1/6 of the total number of BGP entries
+currently, and this fraction is growing smaller over time.
 
 \begin{figure}[htbp]
 	\centering
@@ -45,21 +58,24 @@ number of BGP entries currently, and this fraction is growing smaller over time.
 	\label{fig:fragmentation}
 \end{figure}
 
-ISPs are evidently not inclined to distribute address space in the form in which it was allocated. For various possible reasons (e.g.,
-geographical dispersion), ISPs split up allocated blocks into a number of
-sub-blocks and announce each of these independently. The \emph{fragmented}
-curve in Figure~\ref{fig:fragmentation} represents these subdivided blocks,
-which account for more than 83\% of all entries in the global routing table.
-IP block fragmentation is a primary issue for future scalability of the BGP routing table.
+ISPs are evidently not inclined to distribute address space in the form in
+which it was allocated. For various possible reasons (e.g., geographical
+dispersion), ISPs split up allocated blocks into a number of sub-blocks and
+announce each of these independently. The \emph{fragmented} curve in
+Figure~\ref{fig:fragmentation} represents these subdivided blocks, which
+account for more than 83\% of all entries in the global routing table. IP
+block fragmentation is a primary issue for future scalability of the BGP
+routing table.
 
 The lowest curve, \emph{aggregated}, represents IP prefix announcements that
-cover several allocated IP blocks. That is, in contrast to fragmentation,
-ISPs that have several adjacent IP block allocations simply announce them as a single IP prefix. As the figure illustrates, this aggregation
-technique is rarely employed in any measure.  Aimed to reduce hiking the number of entries in the routing table
-does not work. In 2003 the number of aggregated prefixes was 1,400 and this
-number increased only marginally to nearly 2,000 prefixes in 2009, which is
-nothing comparing to the total number of prefixes in the BGP routing table
-($\approx$300k).
+cover several allocated IP blocks. That is, in contrast to fragmentation, ISPs
+that have several adjacent IP block allocations simply announce them as a
+single IP prefix. As the figure illustrates, this aggregation technique is
+rarely employed in any measure. Aimed to reduce hiking the number of entries
+in the routing table does not work. In 2003 the number of aggregated prefixes
+was 1,400 and this number increased only marginally to nearly 2,000 prefixes
+in 2009, which is nothing comparing to the total number of prefixes in the BGP
+routing table ($\approx$300k).
 
 One surprising conclusion can be made from this analysis. ISPs do not tend to
 globally announce the allocated IP space in the original form, no matter of
