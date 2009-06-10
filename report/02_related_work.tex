@@ -1,33 +1,6 @@
-\section{Related work}
+% In this project we propose to update and extend previous research of global routing table dynamics \cite{Xu:2003:IPv4-Address, Meng:2003:An-analysis-of-BGP-routing, Meng:2005:IPv4-address}. Several recent publications \cite{::BGP-Reports, ::IPv4-Address-Report} reveal up-to-date dynamics of the BGP routing table and revised estimates of IPv4 allocation. However, the more deep analysis at the level of countries and/or particular ASes can reveal significant IP space allocation and utilization patterns and predict future demands for IP space.
+
+\section{Previous measurements}
 \label{sec:related_work}
 
-Past studies \cite{Meng:2005:IPv4-address} \cite{Xu:2003:IPv4-Address}
-\cite{Meng:2003:An-analysis-of-BGP-routing} have characterized growth of the
-Border Gateway Protocol routing table in terms of the prevalence of special
-announcements to suit traffic engineering purposes, longevity of announcements
-appearing and disappearing, and estimated time left until the IPv4 space is
-fully allocated. These studies reflect concerns that BGP operates with
-functions that are not entirely free of conflict with each other (efficiency
-versus policy priorities, i.e. public good versus self serving choices), that
-network traffic growth stemming from BGP updates tracking connectivity changes
-faces scalability limitations, and that the BGP routing table size contributes
-to routing latency. Since the time of those studies between 2003 and 2005, the
-BGP routing table has continued its rate of growth. It is helpful to examine
-the current state of the BGP routing table and quantify how that high-level
-picture has changed from earlier measurements.
-
-Geoff Huston's Potaroo project \cite{::IPv4-Address-Report} present up-to-date
-measurements of the BGP routing table growth from 1994. However, it is also
-worthwhile analyzing whether table fragmentation or aggregation has changed
-over time and how that affects estimates of the routing table size in the
-future.
-
-Another aspect, particularly informative and not as well charted in the past,
-is to document where routing announcements are originating around the world --
-that is, not necessarily a measure of where most new Internet traffic is
-occurring but a way to witness the spreading of Internet infrastructure
-connectivity around the globe. Coupled with an analysis of how long these
-announcements stay in the routing table -- a measure of table stability -- it
-is possible to make some projections how the purposes of connecting to the
-Internet continue to diversify.
-
+Past studies have characterized growth of the Border Gateway Protocol routing table in terms of the prevalence of special announcements to suit traffic engineering purposes, longevity of announcements appearing and disappearing, and estimated time left until the IPv4 space is fully allocated.  These studies reflect concerns that BGP operates with functions that are not entirely free of conflict with each other (efficiency versus policy priorities, i.e. public good versus self serving choices), that network traffic growth stemming from BGP updates tracking connectivity changes faces scalability limitations, and that the BGP routing table size contributes to routing latency.  Since the time of those studies between 2003 and 2005, the BGP routing table has continued its rate of growth.  It is helpful to examine the current state of the BGP routing table and quantify how that high-level picture has changed from earlier measurements.  It is also worthwhile analyzing whether table fragmentation or aggregation has changed over time and how that affects estimates of the routing table size in the future.  But particularly informative and not as well charted in the past is to document where new allocated routing announcements are originating around the world -- that is, not necessarily a measure of where most new Internet traffic is occurring but a way to witness the spreading of Internet infrastructure connectivity around the globe.  Coupled with an analysis of how long these announcements stay in the routing table -- a measure of table stability -- it is possible to make some projections how the purposes of connecting to the Internet continue to diversify. 
