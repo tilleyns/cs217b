@@ -56,14 +56,16 @@ foreach( $res as $row )
 }
 
 $i=0;
-$sql=$sql1." and ((country!='EU' and country!='AP') or country is NULL) ".$sql2;
+//$sql=$sql1." and ((country!='EU' and country!='AP') or country is NULL) ".$sql2;
+$sql=$sql1.$sql2;
+print $sql."\n";
 $res=$DB->Execute( $sql );
 $ret_s="";
 $ret_c="";
 $prevCountry="";
 	foreach( $res as $row )
 	{
-			if( $row['country']=='UK' ) $row['country']='GB';
+//			if( $row['country']=='UK' ) $row['country']='GB';
 			if( $prevCountry!=$row['country'] )
 			{
 					$prevCountry=$row['country'];
@@ -72,12 +74,12 @@ $prevCountry="";
 
 			$count=$row['count'];
 			$size=$row['size'];
-			if( is_EU($row['country']) ) 
+/*			if( is_EU($row['country']) ) 
 			{
 					$count+=$eu[$row['sid']]['count'];
 					$size+=$eu[$row['sid']]['size']; 
 			}
-			
+ */			
 			if( $type=="table" )
 			{
 				print "$i\t$date\t\"$row[region]\"\t\"$row[country]\"\t$row[source]\t$count\t$size\t".($size/$count)."\n";
@@ -92,7 +94,7 @@ $prevCountry="";
 			}
 			else if( $type=="latex" )
 			{
-					print "$row[name]\t&&\t$row[count]\t&&\t$row[size]\t\\hline \\tabularnewline\n";
+					print "$i\t&\t$row[name]\t&\t$row[count]\t&\t".number_format($row["size"])."\t\\tabularnewline \\hline\n";
 			}
 
 	}

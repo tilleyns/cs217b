@@ -1,16 +1,39 @@
 \section{Conclusions}
 \label{sec:conclusions}
 
-BGP table has more than doubled in 6 years
+We have thoroughly analyzed BGP announcement dumps available from University
+of Oregon RouteViews and RIPE NCC Routing Information Service projects. The
+general conclusion of our analysis is that average size of the BGP routing
+table increased more than 2 times in last 6 years. The IP address allocations
+are also doubled in the same period, but numerically, all new allocated blocks
+accounts less than 18\% of the actual entries in the BGP routing table. The
+primary causes of the accelerated BGP routing table growth are allocated IP
+block fragmentation -- more than 80\% of announced prefixes are parts of
+allocated IP blocks; and announced space duplication -- more than 54\% of
+address space is covered at least twice in the global routing table. This
+highlights an emerged problem of a trend to use the global routing table to
+serve local interests, e.g., implementing traffic engineering and multihoming
+techniques.
 
-The BGP table growth outstrips IP allocation rate
+The content analysis of the BGP announcements shows that majority of the
+globally announced prefixes ($>$50\%) have size /24. This additionally
+strengthen the conclusion that most entries in global routing table serve not
+a global, but local interests of small customer networks. Additionally, we
+conclude that the global routing table is very dynamic. Although, there is a
+small portion of highly stable entries ($<$15\%), the rest of the BGP table
+content shows the exponential distribution of prefix longevity.
 
-Every industrialized nation is participating in BGP table growth
-
-ISPs prefer to fragment large allocated blocks into smaller chunks, e.g., /24 prefixes account for more than 50\% of routing table
-
-Demand for IP addresses outpaces the rate IPs are returned to RIRs
-
-Multihoming and traffic engineering techniques introduce redundancy in BGP table (58\% in 2009)
-
-BGP table is highly dynamic (only 16\% is static)
+Analysis of geographical distribution of the IP allocation and BGP announced
+prefixes shows the varied penetration of Internet in a global scale. The
+interesting fact that geographical distribution of the number of allocated
+prefixes as well as numbers of corresponding address space, number of
+announced prefixes, and corresponding globally announced address space
+displays a quasi-exponential distribution. Moreover, this distribution has not
+been changing it's character during last 6 years. Another findings is that
+different countries has different IP address space utilization patterns. For
+example, in Japan tend to announce smaller prefixes (i.e., more addresses
+covered) than South Korea. Numerically, one announced prefix belonging to
+Japan covers 37,200 IP addresses, while in South Korea this number is only
+5,900. If this difference happens because of additional government
+regulations, than for future IPv6 deployment, we should consider an
+establishment of similar global regulations.

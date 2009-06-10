@@ -4,7 +4,9 @@ PDF=01_bgp_ip_size.pdf 02_bgp_max_vs_ip.pdf 02_bgp_max_vs_ip_space.pdf 03_bgp_ip
 	$(patsubst %,05_ip_%.pdf,$(DATES))\
 	$(patsubst %,05_isize_%.pdf,$(DATES))\
 	$(patsubst %,05_bgp_%.pdf,$(DATES)) \
-	$(patsubst %,05_bsize_%.pdf,$(DATES)) 
+	$(patsubst %,05_bsize_%.pdf,$(DATES)) \
+	prefix-distr.pdf size-distr.pdf
+
 #\
 #	$(patsubst %,bgp_%.js,$(DATES)) \
 #	$(patsubst %,ip_%.js,$(DATES))

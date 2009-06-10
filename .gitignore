@@ -39,3 +39,6 @@ report/04_allocations_tables.aux
 report/05_allocations_tables.aux
 report/05_bgp_maps.aux
 report/05_bgp_tables.aux
+report/report.bbl
+report/report.blg
+

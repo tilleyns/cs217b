@@ -26,7 +26,10 @@ foreach( $dates as $a )
 	for( ; $date<$last; $date->modify( "4 week" ) )
 	{
 		$fdate=$date->format("Y-m-d");
-		print " '$fdate',\n";
+		$temp=new DateTime( $fdate ); $temp->modify( "4 week" );
+		$ftemp=$temp->format("Y-m-d");
+
+		print "select '$fdate'::date,'$ftemp'::date INTO ret;return next ret;\n";
 	}
 }
 

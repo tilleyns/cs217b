@@ -1,13 +1,49 @@
 \section{Data sets and methodology}
 \label{sec:data sets}
 
-some words
+The aim of our project is to update and extend IP allocation and BGP routing
+table measurements performed in 2002--2004
+\cite{Meng:2003:An-analysis-of-BGP-routing} \cite{Xu:2003:IPv4-Address}
+\cite{Meng:2005:IPv4-address}. Therefore, we have focused on the time period
+from January 2003 to April 2009. Due to the enormous amount of allocation and
+BGP announcement statistics, we were forced to limit ourselves in our analyses
+to a month scale. This limitation has practically no impact on IP allocation
+analysis, because the IP allocations are generally static. On the other hand,
+due to the dynamic nature of the BGP routing table, collected data does not
+represent global routing table contents very precisely. However, the obtained
+results are highly consistent with previous analyses
+\cite{Meng:2005:IPv4-address} and up-to-date BGP measurements
+\cite{::IPv4-Address-Report}. We are also claiming that the obtained results
+represent lower bounds of the high level dynamic trends.
 
-\subsection{Data sets}
+% \subsection{Data sets}
 
-5 RIRs (ARIN, RIPE NCC, APNIC, LAPNIC, AfriNIC), 5 sources for BGP data (Oregon from RouteViews, Amsterdam, Tokyo, London, Moscow from RIPE NCC),
+IP allocation data was collected from five Regional Internet Registries (RIRs)
+\cite{::IANA----Number}, -- ARIN, RIPE NCC, APNIC, LACNIC, AfriNIC, which,
+with some exceptions, cover the designated world regions. Due to the fact that
+AfriNIC RIR has been officially recognized only on April 8, 2005
+\cite{AKPLOGAN:2005:AfriNIC-now-officially}, IP address space assignment for
+the African region before 2005 was maintained by all others RIRs. Moreover,
+after 2005 some small part of the statistical information was overlapped
+between AfriNIC and other RIRs.
 
+BGP data are monitored by two separate data collection projects: the
+University of Oregon Route Views project \cite{::Route-Views} and the RIPE NCC
+Routing Information Service (RIS) project \cite{::RIS}. These projects
+deployed BGP monitors in more than 20 different locations, including the
+United States, the European Union, and Japan, which collect data from more
+than 600 real BGP peers. For our project we collected statistical data from 5
+BGP monitors (one in Oregon for RouteViews project and four in Amsterdam,
+London, Tokyo, and Moscow for RIS project). All discovered trends are
+consistent over all 5 monitors. That's why we, for space conservation
+purposes, decided to present BGP analysis based on data collected from
+RouteViews project.
 
-\subsection{Methodology}
-
-Data is imported to PostgresSQL database for further processing. The total number of collected prefixes is more than 17 000 000.
+% \subsection{Methodology}
+%	
+% To process high volume of statistical information (over 80,000,000 records
+% of BGP data and over 24,000,000 records of IP allocation data), we imported
+% all data into a PostgresSQL database server. Data was processed on
+% month-by-month basis and is consistent with previous analyses
+% \cite{Meng:2005:IPv4-address} (in the period 2003--2004) and up-to-date
+% measurements \cite{::IPv4-Address-Report}.
