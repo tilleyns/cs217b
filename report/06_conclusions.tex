@@ -12,13 +12,13 @@ We identified several primary causes of the accelerated BGP routing table
 growth.  They are as follows: First, fragmentation of allocated IP blocks--more
 than 80\% of announced prefixes are parts of allocated IP blocks; Second,
 announced space duplication--more than 54\% of the address space is covered at
-least twice in the global routing table). This duplication highlights an
+least twice in the global routing table. This duplication highlights an
 emerging problematic trend of using the global routing table to serve local
-interests, e.g., to implement traffic engineering and multiprovider
+interests, e.g., to implement traffic engineering and multi-provider
 connections.
 
 The content analysis of the BGP announcements shows that majority of the
-globally announced prefixes ($>$50\%) are if /24 size. This further strengthens
+globally announced prefixes ($>$50\%) are of /24 size. This further strengthens
 the conclusion that a substantial number of entries in the global routing table
 serve local, not global, interests of small customer networks. The content of
 the global routing table is highly dynamic. Although there is a small portion
