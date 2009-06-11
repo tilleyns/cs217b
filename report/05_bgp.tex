@@ -4,17 +4,17 @@
 In this section we present an evaluation of the global routing table from 2003
 to 2009. We first analyze contributing causes to the growth of the global
 routing table. This involves assessing a measure of how well ISPs tend to use
-an allocated address space and how allocated address blocks are subdivided.
-The second point of interest is to analyze the contents of the BGP routing
-table itself. This includes determining the extent that IP prefix
-announcements overlap (i.e., how many individual prefixes are also parts of
-bigger prefixes present in the same routing table). We also discuss a measure
-of the stability of the routing table contents. For this measurement, we
-calculate the time period during which an individual prefix was visible to the
-BGP monitor. Finally, in an analogous fashion to the previos section, we
-present an analysis of the BGP routing table dynamics grouped by the
-geographical region. We conclude with identifying countries with the largest
-number of announced prefixes.
+an allocated address space and how allocated address blocks are subdivided. The
+second point of interest is to analyze the contents of the BGP routing table
+itself. This includes determining the extent that IP prefix announcements
+overlap (i.e., how many individual prefixes are also parts of bigger prefixes
+present in the same routing table). We also discuss a measure of the stability
+of the routing table contents. For this measurement, we calculate the time
+period during which an individual prefix was visible to the BGP monitor.
+Finally, in an analogous fashion to the previous section, we present an
+analysis of the BGP routing table dynamics grouped by the geographical region.
+We conclude with identifying countries with the largest number of announced
+prefixes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,8 +181,8 @@ prefix lengths that have appeared in the routing table since 2003.
 announced prefix lengths, classified by each year. The majority of the global
 routing table entries are /24-length prefixes and account for more than 53\% of
 entries. Among statistics for /24 prefixes, it is notable that the number of
-/24 prefixes nearly doubled between 2003 and 2009. At the same time, the number
-of allocated blocks actually /24 in size is 4 times smaller (refer
+/24 prefixes has nearly doubled between 2003 and 2009. At the same time, the
+number of allocated blocks actually /24 in size is 4 times smaller (refer
 Figure~\ref{fig:IP allocations}). This again gives evidence that a large number
 of stub networks (i.e., relatively small customer networks) use announcements
 of small address blocks to implement multi-provider connectivity.
@@ -323,18 +323,19 @@ regulations should be considered globally.
 
 An alternative way to represent each country's contribution to the global
 routing table is through color-coded diagrams in Figures~\ref{fig:bgp prefixes
-2003}--\ref{fig:bgp ip space asia 2009}%
+2003}--\ref{fig:bgp ip space asia 2009}.%
 %
 \footnote{%
 An extended number of interactive colored maps for years 2003--2009 are
 available at \url{http://maps.iu4.ru}}%
 %
-. The figure pairs~\ref{fig:bgp prefixes 2003} \&~\ref{fig:bgp prefixes 2009},
-as well as~\ref{fig:bgp ip space 2003} \&~\ref{fig:bgp ip space 2009}, makes it
+ The figure pairs~\ref{fig:bgp prefixes 2003} \&~\ref{fig:bgp prefixes 2009},
+as well as~\ref{fig:bgp ip space 2003} \&~\ref{fig:bgp ip space 2009}, make it
 possible to trace the regional Internet growth dynamics. Figures~\ref{fig:bgp
 prefixes asia 2009} and~\ref{fig:bgp ip space asia 2009} emphasize once again
 differences of the varying effectiveness of IP space utilization (e.g., Japan
-has many more addresses per announced prefix compared to India or South Korea).
+has many more addresses per announced prefix than compared to India or South
+Korea).
 
 \input{05_bgp_tables}
 \input{05_bgp_maps}
