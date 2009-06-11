@@ -3,43 +3,44 @@
 
 We have analyzed BGP announcement dumps available from the University of Oregon
 Route Views and RIPE NCC Routing Information Service projects. Between 2003 and
-2009, in a span of 6 years, the size of the BGP routing table more than doubled
-on average. Likewise the IP address allocations also doubled in the same
-period. Numerically, however, all the new allocated blocks added less than 18\%
-of the total entries in the BGP routing table.
+2009, a span of 6 years, the average size of the BGP routing table more than
+doubled. Likewise the IP address allocations also doubled in the same period.
+Numerically, however, all the new allocated blocks added less than 18\% of the
+total entries in the BGP routing table.
 
 We identified several primary causes of the accelerated BGP routing table
-growth.  They are as follows: First, fragmentation of allocated IP blocks--more
-than 80\% of announced prefixes are parts of allocated IP blocks; Second,
-announced space duplication--more than 54\% of the address space is covered at
+growth.  They are as follows: First, fragmentation of allocated IP blocks; more
+than 80\% of announced prefixes are parts of allocated IP blocks. Second,
+announced space duplication; more than 54\% of the address space is covered at
 least twice in the global routing table. This duplication highlights an
 emerging problematic trend of using the global routing table to serve local
 interests, e.g., to implement traffic engineering and multi-provider
 connections.
 
-The content analysis of the BGP announcements shows that majority of the
-globally announced prefixes ($>$50\%) are of /24 size. This further strengthens
-the conclusion that a substantial number of entries in the global routing table
-serve local, not global, interests of small customer networks. The content of
-the global routing table is highly dynamic. Although there is a small portion
-of highly stable entries ($<$15\%), the remainder of the BGP table content fits
-an exponential tapering-off distribution for prefix longevity.
+The content analysis of BGP routing table announcements shows that the majority
+of the globally announced prefixes ($>$50\%) are of /24 size. This further
+strengthens the conclusion that a substantial number of entries in the global
+routing table serve local, not global, interests of small customer networks.
+The content of the global routing table is highly dynamic. Although there is a
+small portion of highly stable entries ($<$15\%), the remainder of the BGP
+table content fits an exponential tapering-off distribution for prefix
+longevity.
 
 Our examination of the geographical distribution of IP allocation and BGP
-announced prefixes shows a wide-ranging depth of penetration of the Internet
-around the globe. We observed a number of quasi-exponential distributions for
-various measurements, including for the following: the geographical
-distribution of the number of allocated prefixes, the numbers of the
-corresponding address spaces, the number of announced prefixes, and the
+announced prefixes shows a depth of penetration of the Internet around the
+globe that is wide-ranging. We have observed a number of quasi-exponential
+distributions for various measurements, including for the following: the
+geographical distribution of the number of allocated prefixes, the numbers of
+the corresponding address spaces, the number of announced prefixes, and the
 corresponding globally announced address spaces. Moreover these distributions
-have not significantly changed in character ovre the last 6 years.
+have not significantly changed in character over the last 6 years.
 
-Another finding is that different countries have different IP address space
+Another finding is that various countries have differing IP address space
 utilization patterns. For example, Japan tends to announce shorter prefixes
 (i.e., more addresses covered) than South Korea. Numerically, one announced
 prefix belonging to Japan covers 37,200 IP addresses, while in South Korea this
 number is only 5,900. Observing this difference can hold relevant implications
 for future IPv6 deployment; if additional government regulation can account for
 a large part of the difference between the two countries, then it is strongly
-worthwhile to consider establishing an appropriate set of similar regulations
-on a global scale.
+worthwhile to consider establishing an analogous and appropriate set of similar
+regulations on a global scale.

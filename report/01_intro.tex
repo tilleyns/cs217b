@@ -5,12 +5,12 @@ infrastructure for Internet routing. The routing protocol operates at the
 junction point where independent networks (ASes, or autonomous systems)
 exchange network traffic to ensure global connectivity. Because ASes are
 separate networking and economic entities, BGP currently operates while
-balancing essentially two purposes which are practically orthogonal to one
+balancing essentially two purposes which in most respects are orthogonal to one
 another. First, it interconnects all ASes in the world. Second, BGP tries to
 satisfy a wide variety of ISP-specific routing policies, which are governed by
 operating costs, a number of agreement-based and politically-based issues,
 network locality, multihoming preferences, and, in some select cases, traffic
-connection capacity. 
+connection capacity.
 
 % These have functioned, mostly together and at times as trade-offs to one
 % another, to increase complexity within BGP and to deliver the present level
@@ -29,13 +29,12 @@ implementation of particular traffic engineering to suit any special purposes.
 Likewise, individual institutions have grown to need more IP addresses than
 originally allocated and received additional address blocks that are
 non-adjacent. In either case, the routing table has expanded enormously over
-the past ten years, with the table maintaining more entries than a
-hierarchical structure would have yielded that worked with strictly
-consolidated blocks. Figure~\ref{fig:BGP vs RIR} shows that over the past six
-years the number of the global routing table entries more than doubled during
-last 6 years. The IP address allocations also doubled in the same period but,
-numerically, all new allocated blocks account for less than 18\% of the actual
-entries in the BGP routing table. 
+the past ten years, with the table maintaining more entries than a hierarchical
+structure would have yielded that worked with strictly consolidated blocks.
+Figure~\ref{fig:BGP vs RIR} shows that over the past six years the number of
+the global routing table entries has more than doubled. IP address allocations
+have also doubled in the same period, but numerically, all new allocated blocks
+account for less than 18\% of the actual entries in the BGP routing table.
 % To account for this, correspondingly, the
 % Internet has handled an increasing number of transmitted BGP updates to
 % propagate these steadily ongoing changes.
@@ -48,15 +47,16 @@ entries in the BGP routing table.
 \end{figure}
 
 There is an interesting aspect to notice with the BGP table growth. While the
-routing table has undergone a substantial growth (compared to the number of
-new allocated IP space), all the IP space that these announcements cover is
-still only a fraction of the total measured IP space that has been allocated.
-This is shown in Figure~\ref{fig:BGP vs RIR space}, which illustrates that
-over time, the amount of dormant IP space -- allocated, but not announced in
-routing tables -- has ranged from a little over 1/3 to a little over 1/4 of
-the total. Despite the high ratio between the number of announced prefixes in
-the BGP table and the number of actually allocated IP blocks (2.24 in 2003 and
-3.06 in 2009), the substantial amount of IP space ($\approx$25\%) is still unused.
+routing table has experienced substantial growth (compared to the number of new
+IP spaces allocated), all the IP space that the announcements in the routing
+table cover is still only a fraction of the total measured IP space that has
+been allocated. This is shown in Figure~\ref{fig:BGP vs RIR space}, which
+illustrates that over time, the amount of dormant IP space---allocated, but not
+announced in routing tables---has ranged from a little over 1/3 to a little
+over 1/4 of the total. Despite the high ratio between the number of announced
+prefixes in the BGP table and the number of actually allocated IP blocks (2.24
+in 2003, 3.06 in 2009), a substantial portion of IP space ($\approx$25\%) is
+still unused.
 
 \begin{figure}[htbp]
 	\centering
@@ -67,34 +67,32 @@ the BGP table and the number of actually allocated IP blocks (2.24 in 2003 and
 \end{figure}
 
 
-% 
+%
 %  update and expand on some of the done previously by Meng et
 % al. \cite{Meng:2005:IPv4-address}. The prior research reported a number of
-% statistics that serve as a baseline for our project. These include 
+% statistics that serve as a baseline for our project. These include
 %
 
-In this paper we presenting an extensive analysis of the IP allocation and BGP
-announcement statistics. First, we present an analysis of the dynamics of IP
-address allocation and the recent history of which prefix block sizes are most
+In this paper we present an extensive analysis of the IP allocation and BGP
+announcement statistics. First, we examine the dynamics of IP address
+allocation and recent history regarding which prefix block sizes are most
 popular to allocate to ISPs (Internet Service Providers). We find when IP
 prefixes have been allocated, as viewed on a yearly basis, and link this
-activity to regions of the world where such allocations have been requested.
-We then summarize where the most changes have occurred, which indicate where
-the busiest Internet areas around the world are and, more importantly,
-identify as well the regions where there has been the most rapid development
-of ISP hosting.
+activity to regions of the world where such allocations have been requested. We
+then summarize where the most changes have occurred, which indicate where the
+busiest Internet areas around the world are and, more importantly, identify the
+regions where there has been the most rapid development of ISP hosting.
 
 Second, we examine the correlation between the global routing table and IP
-prefix allocation data. From the common prefix block sizes to allocate, we
-show what sized blocks are more typical in the BGP table. On a related note,
-we estimate the age, or lifespan, of BGP entries as measured between 2003 and
+prefix allocation data. From the common prefix block sizes to allocate, we show
+what sized blocks are most common in the BGP table. On a related note, we
+estimate the age, or lifespan, of BGP entries as measured between 2003 and
 2009. We present, as before with IP address block allocations, a summary by
 geography of which regions of the globe contribute to the BGP table contents
 each year. It will be possible to draw some conclusions about a country's
-``efficiency'' of its IP space announcement: a measure of how much allocated
-IP space on average is routed by one globally announced prefix. We also
-discuss a number of factors that contribute to the marked growth in the
-routing table.
+``efficiency'' of its IP space announcement: a measure of how much allocated IP
+space on average is routed by one globally announced prefix. We also discuss a
+number of factors that contribute to the marked growth in the routing table.
 
 The rest of the paper is organized as follows. Section~\ref{sec:data sets}
 describes the data sets and methodology used in our study.
@@ -113,4 +111,4 @@ Sections~\ref{sec:related_work} and \ref{sec:conclusions}, respectively.
 % picture of total # of prefixes
 % picture of total # of IP space
 
-% Section~\ref{sec:} provides an introduction to the Border Gateway Protocol.    Section 4 presents statistics for IP address allocation and announcement and the BGP table growth.  Section 5 concerns the trends of fragmentation in the BGP routing table.  Section 6 draws a connection between locality and routing table growth, and it shows in which parts of the globe Internet connectivity has been expanding over the last several years.  Section 7 presents data on the longevity and stability of routing table entries.  Related work is discussed in Section 8, followed by the conclusion in Section 9.   Section 2to enable routing to these IP address blocksthe distribution of IP prefix announcements per region of the worldWe propose to conduct more detailed research by country and AS granularity on the ratio and correlation between the number of allocated blocks and the announced prefixes within the BGP routing table. Arguably, any attempt to renumber allocations such that they are less fragmented would reduce both the number of allocations and correspondingly the number of prefixes and size of the BGP table. Our analysis will help to establish an upper bound of the potential BGP routing table reduction if an IPv4 renumbering technique were to be implemented. Additionally, this will justify the necessity of effective IPv6 address assignment and reassignment techniques. 
+% Section~\ref{sec:} provides an introduction to the Border Gateway Protocol.    Section 4 presents statistics for IP address allocation and announcement and the BGP table growth.  Section 5 concerns the trends of fragmentation in the BGP routing table.  Section 6 draws a connection between locality and routing table growth, and it shows in which parts of the globe Internet connectivity has been expanding over the last several years.  Section 7 presents data on the longevity and stability of routing table entries.  Related work is discussed in Section 8, followed by the conclusion in Section 9.   Section 2to enable routing to these IP address blocksthe distribution of IP prefix announcements per region of the worldWe propose to conduct more detailed research by country and AS granularity on the ratio and correlation between the number of allocated blocks and the announced prefixes within the BGP routing table. Arguably, any attempt to renumber allocations such that they are less fragmented would reduce both the number of allocations and correspondingly the number of prefixes and size of the BGP table. Our analysis will help to establish an upper bound of the potential BGP routing table reduction if an IPv4 renumbering technique were to be implemented. Additionally, this will justify the necessity of effective IPv6 address assignment and reassignment techniques.
